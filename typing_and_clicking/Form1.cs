@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.IO;
+using System.Media;
 
 
 namespace typing_and_clicking
@@ -34,6 +35,21 @@ namespace typing_and_clicking
              //"{Enter}" ,"{Enter}" ,"{Enter}" 
              //"+(a)", "%{TAB}",,"{Enter}" ,"{Enter}" ,"{Enter}" 
         };
+
+
+        private bool playSoundStatus = true; 
+      
+
+        private string[] soundsStr1 = new string[] {
+            "626","392","392","392","392","392","392","392","392","392"
+        };
+        private string[] soundsStr2 = new string[] {
+            "2000","2000","4000","100","3530","3500","3504","3540","3500","3550"
+        };
+
+
+        private int prevHour=0, prevMin=0, prevSec=0; 
+
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -76,9 +92,14 @@ namespace typing_and_clicking
             //clicking interval
             textBox3.Text = "100";
             textBox4.Text = "3000";
-              
+
+
+            sound_duration_textBox5.Text = "2000";
+            
             // time
             timer3.Start(); 
+
+
 
         }
 
@@ -113,6 +134,7 @@ namespace typing_and_clicking
 
             button1.Enabled = true;
             button2.Enabled = true;
+             
 
 
             mouse_click_counter = 0;
@@ -139,6 +161,10 @@ namespace typing_and_clicking
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
+            sound_duration_textBox5.Enabled = true;
+
+            sounds_time_play_type_comboBox1.Enabled = true;
+            sounds_time_play_value_textBox5.Enabled = true;
 
             timer1.Stop();
             timer2.Stop(); 
@@ -188,8 +214,121 @@ namespace typing_and_clicking
                 hours_zero = "";
             }
 
-            label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
-        
+
+
+
+
+
+
+
+
+
+
+            /**
+            * Sound Beep Start
+            * Hours has a bug
+            * if hour is zero then dont play sounds
+            * just play once and dont repeat it
+            */
+            int sounds_time_play_value  = Int32.Parse(sounds_time_play_value_textBox5.Text); 
+
+            if (sounds_time_play_type_comboBox1.Text == "Hours")
+            {
+                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " hours ");
+                if (hours % sounds_time_play_value == 0)
+                {
+                    if(hours != 0) {  
+                        if(prevHour != hours) {  
+                            Thread th = new Thread(playSounds);
+                            th.Start();
+                            prevHour = hours;
+                        }  
+                    }
+                }
+            }
+            else if (sounds_time_play_type_comboBox1.Text == "Minutes")
+            {
+                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " mins ");
+                if (minutes % sounds_time_play_value == 0)
+                {
+                    if (minutes != 0)
+                    {
+                        if (prevMin != minutes)
+                        {
+                            Thread th = new Thread(playSounds);
+                            th.Start();
+                            prevMin = minutes;
+                        }
+
+                       
+                    }
+                }
+            }
+            else if (sounds_time_play_type_comboBox1.Text == "Seconds")
+            {
+                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " seconds ");
+                if (seconds % sounds_time_play_value == 0)
+                {
+                    if (seconds != 0)
+                    {
+                        if (prevSec != seconds)
+                        {
+                            Thread th = new Thread(playSounds);
+                            th.Start();
+                            prevSec = seconds;
+                        }  
+                    }
+                }
+            }
+            /**
+            * Beed Sounds End
+            */
+
+
+
+
+
+
+
+        label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
+
+        }
+
+
+        /**  
+           sample beep inputs: 
+
+           626, 2000, C
+           392, 2000, G
+           523, 4000, C
+           652, 100, E
+           620, 3530, EB
+           621, 3500, EB
+           622, 3504, EB
+           626, 3540, EB
+           625, 3500, EB
+           622, 3550, EB 
+        */ 
+       private void playSounds()
+        {
+
+
+
+          // soundsStr1
+          // soundsStr1
+           
+           // for(int i=0; i< soundsStr1.Length; i++ )
+           // { 
+            //only play shouds if auto typing and clicking is activated
+            if(button1.Enabled == false && playSoundStatus == true)
+            { 
+                int frequency = Int32.Parse("626");
+                int duration = Int32.Parse(sound_duration_textBox5.Text);
+                Console.Beep(frequency, duration);
+
+            }
+            //  }
+
         }
 
         private const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
@@ -208,7 +347,9 @@ namespace typing_and_clicking
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             textBox4.Enabled = false;
-
+            sound_duration_textBox5.Enabled = false;
+            sounds_time_play_type_comboBox1.Enabled = false;
+            sounds_time_play_value_textBox5.Enabled = false;
 
             button1.Enabled = false;
             button2.Enabled = true;
@@ -234,6 +375,9 @@ namespace typing_and_clicking
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
+            sound_duration_textBox5.Enabled = true; 
+            sounds_time_play_type_comboBox1.Enabled = true;
+            sounds_time_play_value_textBox5.Enabled = true;
 
 
             button1.Enabled = true;

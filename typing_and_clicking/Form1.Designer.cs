@@ -47,13 +47,18 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.sound_duration_label8 = new System.Windows.Forms.Label();
+            this.sound_duration_textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.sounds_time_play_value_textBox5 = new System.Windows.Forms.TextBox();
+            this.sounds_time_play_type_comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 64);
+            this.button1.Size = new System.Drawing.Size(113, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,9 +66,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(134, 12);
+            this.button2.Location = new System.Drawing.Point(147, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 64);
+            this.button2.Size = new System.Drawing.Size(115, 64);
             this.button2.TabIndex = 1;
             this.button2.Text = "Pause";
             this.button2.UseVisualStyleBackColor = true;
@@ -116,7 +121,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 181);
+            this.textBox1.Location = new System.Drawing.Point(123, 146);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(62, 20);
             this.textBox1.TabIndex = 6;
@@ -124,7 +129,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(87, 181);
+            this.textBox2.Location = new System.Drawing.Point(199, 146);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(63, 20);
             this.textBox2.TabIndex = 7;
@@ -132,7 +137,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(16, 243);
+            this.textBox3.Location = new System.Drawing.Point(123, 176);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(64, 20);
             this.textBox3.TabIndex = 9;
@@ -140,7 +145,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(94, 243);
+            this.textBox4.Location = new System.Drawing.Point(199, 176);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(63, 20);
             this.textBox4.TabIndex = 8;
@@ -149,7 +154,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 156);
+            this.label5.Location = new System.Drawing.Point(12, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 10;
@@ -158,7 +163,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 218);
+            this.label6.Location = new System.Drawing.Point(17, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 11;
@@ -166,9 +171,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 279);
+            this.button3.Location = new System.Drawing.Point(21, 290);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 59);
+            this.button3.Size = new System.Drawing.Size(241, 59);
             this.button3.TabIndex = 12;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
@@ -197,11 +202,63 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "00 : 00 : 00";
             // 
+            // sound_duration_label8
+            // 
+            this.sound_duration_label8.AutoSize = true;
+            this.sound_duration_label8.Location = new System.Drawing.Point(18, 242);
+            this.sound_duration_label8.Name = "sound_duration_label8";
+            this.sound_duration_label8.Size = new System.Drawing.Size(84, 13);
+            this.sound_duration_label8.TabIndex = 17;
+            this.sound_duration_label8.Text = "Sound Duration:";
+            // 
+            // sound_duration_textBox5
+            // 
+            this.sound_duration_textBox5.Location = new System.Drawing.Point(124, 242);
+            this.sound_duration_textBox5.Name = "sound_duration_textBox5";
+            this.sound_duration_textBox5.Size = new System.Drawing.Size(63, 20);
+            this.sound_duration_textBox5.TabIndex = 18;
+            this.sound_duration_textBox5.Text = "2000";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Play Sounds Every";
+            // 
+            // sounds_time_play_value_textBox5
+            // 
+            this.sounds_time_play_value_textBox5.Location = new System.Drawing.Point(199, 208);
+            this.sounds_time_play_value_textBox5.Name = "sounds_time_play_value_textBox5";
+            this.sounds_time_play_value_textBox5.Size = new System.Drawing.Size(63, 20);
+            this.sounds_time_play_value_textBox5.TabIndex = 20;
+            this.sounds_time_play_value_textBox5.Text = "10";
+            // 
+            // sounds_time_play_type_comboBox1
+            // 
+            this.sounds_time_play_type_comboBox1.FormattingEnabled = true;
+            this.sounds_time_play_type_comboBox1.Items.AddRange(new object[] {
+            "Hours",
+            "Minutes",
+            "Seconds"});
+            this.sounds_time_play_type_comboBox1.Location = new System.Drawing.Point(124, 207);
+            this.sounds_time_play_type_comboBox1.Name = "sounds_time_play_type_comboBox1";
+            this.sounds_time_play_type_comboBox1.Size = new System.Drawing.Size(61, 21);
+            this.sounds_time_play_type_comboBox1.TabIndex = 21;
+            this.sounds_time_play_type_comboBox1.Text = "Hours";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 346);
+            this.ClientSize = new System.Drawing.Size(272, 354);
+            this.Controls.Add(this.sounds_time_play_type_comboBox1);
+            this.Controls.Add(this.sounds_time_play_value_textBox5);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.sound_duration_textBox5);
+            this.Controls.Add(this.sound_duration_label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
@@ -246,6 +303,11 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label sound_duration_label8;
+        private System.Windows.Forms.TextBox sound_duration_textBox5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox sounds_time_play_value_textBox5;
+        private System.Windows.Forms.ComboBox sounds_time_play_type_comboBox1;
     }
 }
 
