@@ -76,8 +76,7 @@ namespace typing_and_clicking
             //clicking interval
             textBox3.Text = "100";
             textBox4.Text = "3000";
-             
-
+              
             // time
             timer3.Start(); 
 
@@ -94,6 +93,14 @@ namespace typing_and_clicking
         private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
         private const int MOUSEEVENTF_LEFTUP = 0x0004;
 
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            //Change the title while app is working.. 
+            Random r = new Random();
+            string str = "........";
+            this.Text = str.Substring(0, r.Next(1, str.Length));
+        }
+
         private const int MOUSEEVENTF_RIGHTUP = 0x0010;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -104,25 +111,34 @@ namespace typing_and_clicking
         private void button3_Click(object sender, EventArgs e)
         {
 
+            button1.Enabled = true;
+            button2.Enabled = true;
+
+
             mouse_click_counter = 0;
             key_typing_counter = 0;
 
             // typing interval
             textBox1.Text = "100";
-            textBox2.Text = "1000";
+            textBox2.Text = "2000";
 
 
             //clicking interval
             textBox3.Text = "100";
-            textBox4.Text = "1000";
+            textBox4.Text = "3000";
 
             // typing times
             label1.Text = "0";
 
             // clicking times
-            label4.Text = "0"; 
+            label4.Text = "0";
 
 
+            //enable fields for interval
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
 
             timer1.Stop();
             timer2.Stop(); 
@@ -181,8 +197,21 @@ namespace typing_and_clicking
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             timer1.Start();
             timer2.Start();
+           
+
+
+            //enable fields for interval
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+
+
+            button1.Enabled = false;
+            button2.Enabled = true;
         }
 
         public void Clicker(int x, int y)
@@ -198,6 +227,17 @@ namespace typing_and_clicking
         {
             timer1.Stop();
             timer2.Stop();
+
+
+            //enable fields for interval
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
+
+
+            button1.Enabled = true;
+            button2.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -245,7 +285,15 @@ namespace typing_and_clicking
             label1.Text = key_typing_counter.ToString();
 
 
-            Console.WriteLine( "Typing Pause " + s2); 
+            Console.WriteLine( "Typing Pause " + s2);
+
+
+
+            // form title changing while app is running
+            string str = "..........";
+            this.Text = str.Substring(0, r.Next(1, str.Length));
+
+
 
         }
     }
