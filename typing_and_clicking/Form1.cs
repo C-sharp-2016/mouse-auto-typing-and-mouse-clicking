@@ -99,7 +99,11 @@ namespace typing_and_clicking
 
 
             sound_duration_textBox5.Text = "2000";
-            
+             
+            ctr_plug_tab_checkbox1.Checked = true;
+
+
+
             // time
             timer3.Start();
 
@@ -175,7 +179,9 @@ namespace typing_and_clicking
             sound_duration_textBox5.Enabled = true;
 
             sounds_time_play_type_comboBox1.Enabled = true;
-            sounds_time_play_value_textBox5.Enabled = true;
+            sounds_time_play_value_textBox5.Enabled = true; 
+            ctr_plug_tab_checkbox1.Enabled = true;
+
 
             timer1.Stop();
             timer2.Stop(); 
@@ -224,16 +230,7 @@ namespace typing_and_clicking
             {
                 hours_zero = "";
             }
-
-
-
-
-
-
-
-
-
-
+             
 
             /**
             * Sound Beep Start
@@ -249,10 +246,18 @@ namespace typing_and_clicking
                 if (hours % sounds_time_play_value == 0)
                 {
                     if(hours != 0) {  
-                        if(prevHour != hours) {  
-                            Thread th = new Thread(playSounds);
-                            th.Start();
-                            prevHour = hours;
+                        if(prevHour != hours) {
+                            if (button1.Enabled == false)
+                            {
+                                Thread th = new Thread(playSounds);
+                                th.Start();
+                                prevHour = hours;
+
+                                if (ctr_plug_tab_checkbox1.Checked == true)
+                                {
+                                    send_key_ctr_plus_tab();
+                                }
+                            }
                         }  
                     }
                 }
@@ -266,12 +271,18 @@ namespace typing_and_clicking
                     {
                         if (prevMin != minutes)
                         {
-                            Thread th = new Thread(playSounds);
-                            th.Start();
-                            prevMin = minutes;
-                        }
+                            if (button1.Enabled == false)
+                            {
+                                Thread th = new Thread(playSounds);
+                                th.Start();
+                                prevMin = minutes;
 
-                       
+                                if (ctr_plug_tab_checkbox1.Checked == true)
+                                {
+                                    send_key_ctr_plus_tab();
+                                }
+                            }
+                        } 
                     }
                 }
             }
@@ -283,26 +294,35 @@ namespace typing_and_clicking
                     if (seconds != 0)
                     {
                         if (prevSec != seconds)
-                        {
-                            Thread th = new Thread(playSounds);
-                            th.Start();
-                            prevSec = seconds;
+                        { 
+                            if(button1.Enabled == false) { 
+
+                                Thread th = new Thread(playSounds);
+                                th.Start();
+                                prevSec = seconds; 
+
+                                if (ctr_plug_tab_checkbox1.Checked == true)
+                                {
+                                    send_key_ctr_plus_tab();
+                                }
+                            }  
                         }  
                     }
                 }
             }
             /**
             * Beed Sounds End
-            */
+            */ 
+            label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
+
+        }
 
 
 
 
-
-
-
-        label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
-
+        void send_key_ctr_plus_tab()
+        {
+            SendKeys.Send("^{Tab}");
         }
 
 
@@ -365,6 +385,8 @@ namespace typing_and_clicking
             sound_duration_textBox5.Enabled = false;
             sounds_time_play_type_comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
+            ctr_plug_tab_checkbox1.Enabled = false;
+
 
             button1.Enabled = false;
             button2.Enabled = true;
@@ -397,7 +419,7 @@ namespace typing_and_clicking
             sound_duration_textBox5.Enabled = true; 
             sounds_time_play_type_comboBox1.Enabled = true;
             sounds_time_play_value_textBox5.Enabled = true;
-
+            ctr_plug_tab_checkbox1.Enabled = true;
 
             button1.Enabled = true;
             button2.Enabled = false;
@@ -533,6 +555,7 @@ namespace typing_and_clicking
                 sound_duration_textBox5.Enabled = false;
                 sounds_time_play_type_comboBox1.Enabled = false;
                 sounds_time_play_value_textBox5.Enabled = false;
+                ctr_plug_tab_checkbox1.Enabled = false;
 
                 button1.Enabled = false;
                 button2.Enabled = true;
@@ -562,6 +585,7 @@ namespace typing_and_clicking
                 sound_duration_textBox5.Enabled = true;
                 sounds_time_play_type_comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
+                ctr_plug_tab_checkbox1.Enabled = true;
 
 
                 button1.Enabled = true;
@@ -603,10 +627,11 @@ namespace typing_and_clicking
                 textBox2.Enabled = true;
                 textBox3.Enabled = true;
                 textBox4.Enabled = true;
-                sound_duration_textBox5.Enabled = true;
+                sound_duration_textBox5.Enabled = true; 
 
                 sounds_time_play_type_comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
+                ctr_plug_tab_checkbox1.Enabled = true;
 
                 timer1.Stop();
                 timer2.Stop();
