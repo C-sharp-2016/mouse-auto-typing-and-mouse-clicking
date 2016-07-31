@@ -36,8 +36,6 @@
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Windows.Input.Manipulations" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,20 +48,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class2.cs" />
-    <Compile Include="Classess\TestClass2.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeyboardInput.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestClass1.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,7 +67,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,21 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\13717884_1100462439990694_377995223_o.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\antigua_beaches-wallpaper-1366x768.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\summertime_6-wallpaper-1366x768.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\summertime_6-wallpaper-1366x7681.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\summertime_vacation-wallpaper-1366x768.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

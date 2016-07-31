@@ -6,25 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.IO;
 using System.Media;
-using System.Windows; 
 using System.Windows.Input;
-using System.Windows.Forms; 
-
-
-
-using typing_and_clicking;
- 
 
 
 namespace typing_and_clicking
 {
     public partial class Form1 : Form
-    { 
+    {
+
+
+
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
 
@@ -41,10 +37,6 @@ namespace typing_and_clicking
              //"+(a)", "%{TAB}",,"{Enter}" ,"{Enter}" ,"{Enter}" 
         };
 
-        internal void pressedResetButton()
-        {
-            throw new NotImplementedException();
-        }
 
         private bool playSoundStatus = true; 
       
@@ -60,17 +52,11 @@ namespace typing_and_clicking
         private int prevHour=0, prevMin=0, prevSec=0; 
 
 
-
-
-
- 
-
-
-
-
-
         private void timer2_Tick(object sender, EventArgs e)
         {
+
+            Console.WriteLine("timer 2 ticking");
+
 
             Random r = new Random();
 
@@ -79,9 +65,7 @@ namespace typing_and_clicking
 
             int x = System.Windows.Forms.Cursor.Position.X;
             int y = System.Windows.Forms.Cursor.Position.Y;
-
              
-
             Clicker(x, y);
              
             label4.Text = mouse_click_counter.ToString();
@@ -119,44 +103,14 @@ namespace typing_and_clicking
             // time
             timer3.Start();
 
-            _Form1 = this;
 
-             
+
             //// Initialized 
             /// thread for keypressed detect  
-            startKeyPressDetectThread(); 
+            startKeyPressDetectThread();
+
+
         }
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public static Form1 _Form1;
-         
-         
-
-        public void updateLabelTest(string str)
-        {
-
-            keypressed_label.Text = str; 
-        }
-         
-
-
-
 
 
 
@@ -169,7 +123,6 @@ namespace typing_and_clicking
         private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
         private const int MOUSEEVENTF_LEFTUP = 0x0004;
 
-       
         private void timer4_Tick(object sender, EventArgs e)
         {
             //Change the title while app is working.. 
@@ -180,11 +133,15 @@ namespace typing_and_clicking
 
         private const int MOUSEEVENTF_RIGHTUP = 0x0010;
 
-      
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-              
+            keypressed_label.Text = "Reset";
+             
 
             button1.Enabled = true;
             button2.Enabled = true;
@@ -288,7 +245,7 @@ namespace typing_and_clicking
 
             if (sounds_time_play_type_comboBox1.Text == "Hours")
             {
-                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " hours ");
+                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " hours ");
                 if (hours % sounds_time_play_value == 0)
                 {
                     if(hours != 0) {  
@@ -302,7 +259,7 @@ namespace typing_and_clicking
             }
             else if (sounds_time_play_type_comboBox1.Text == "Minutes")
             {
-                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " mins ");
+                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " mins ");
                 if (minutes % sounds_time_play_value == 0)
                 {
                     if (minutes != 0)
@@ -320,7 +277,7 @@ namespace typing_and_clicking
             }
             else if (sounds_time_play_type_comboBox1.Text == "Seconds")
             {
-                Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " seconds ");
+                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " seconds ");
                 if (seconds % sounds_time_play_value == 0)
                 {
                     if (seconds != 0)
@@ -338,7 +295,12 @@ namespace typing_and_clicking
             * Beed Sounds End
             */
 
-             
+
+
+
+
+
+
         label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
 
         }
@@ -385,7 +347,10 @@ namespace typing_and_clicking
 
         private void button1_Click(object sender, EventArgs e)
         {
-             
+
+
+            keypressed_label.Text = "Start";
+
 
             timer1.Start();
             timer2.Start();
@@ -405,11 +370,6 @@ namespace typing_and_clicking
             button2.Enabled = true;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void Clicker(int x, int y)
         {
             SetCursorPos(x, y);
@@ -422,7 +382,9 @@ namespace typing_and_clicking
         private void button2_Click(object sender, EventArgs e)
         {
 
-             
+            keypressed_label.Text = "Stop";
+
+
             timer1.Stop();
             timer2.Stop();
 
@@ -448,6 +410,8 @@ namespace typing_and_clicking
             // new MouseEventArgs(System.Windows.Forms.MouseButtons.Left, 1, 1, 1, 1);
 
 
+
+            Console.WriteLine("timer 1 ticking");
             int sleepLimit = 1000;
 
             Random r = new Random();
@@ -493,7 +457,6 @@ namespace typing_and_clicking
             // form title changing while app is running
             string str = "..........";
             this.Text = str.Substring(0, r.Next(1, str.Length));
-
              
         }
 
@@ -501,43 +464,6 @@ namespace typing_and_clicking
 
 
 
-
-
-        //Short Cut keys
-      //  public void pressedResetButton()
-      //  {
-            //Console.WriteLine("Start button pressed");
-            //disableFields();
-      //  }
-
-
-
-
-       // public void pressedStopButton()
-       // {
-            //Console.WriteLine("Stop!");
-            //button3.Enabled = false;
-        //    keypressed_label.Text = "stop pressed!";
-      //  }
-         
-        public void pressedResetButton123( string str )
-        {
-
-            keypressed_label.Text = str; 
-            
-            //new KeyboardInput();
-
-            //Console.WriteLine("reset!");
-            //disableFields();
-
-            //disableFields();
-             
-            //button3.Enabled = true;
-
-            Console.WriteLine(" str = " + str);
-             
-             
-        }
 
 
 
@@ -549,9 +475,9 @@ namespace typing_and_clicking
 
 
             private bool isRunning = true;
-            private int  pressed = 0;
+            private int pressed = 0;
 
-            
+
             private void startKeyPressDetectThread()
             {
                 Thread TH = new Thread(Keyboardd11);
@@ -567,25 +493,11 @@ namespace typing_and_clicking
                 {
                     Thread.Sleep(100);
 
-
-                   
-                    if (Keyboard.IsKeyDown(Key.E))
-                    {
-                        PressedStartButton();
-                        pressed++;
-                    }
-                    if (Keyboard.IsKeyDown(Key.R))
+                    if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
                         PressedStopButton();
-                    }
-                    if (Keyboard.IsKeyDown(Key.T))
-                    {
-                        PressedResetButton(); 
-                    }
-                  
-                     
-
-            }
+                    }  
+                }
             }
 
 
@@ -593,17 +505,26 @@ namespace typing_and_clicking
 
 
             //// this is the copy of start button click 
-            public void PressedStartButton()
+             void PressedStartButton()
             {
 
 
-                keypressed_label.Text = "Start";
+
+
+                Console.WriteLine("Start pressed");
+
 
                 timer1.Start();
                 timer2.Start();
 
 
+                keypressed_label.Text = "Start";
+                
+                
 
+
+
+                
                 //enable fields for interval
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
@@ -617,12 +538,12 @@ namespace typing_and_clicking
                 button2.Enabled = true;
 
 
-            Console.WriteLine(keypressed_label.Text); 
+                Console.WriteLine(keypressed_label.Text);
 
             }
 
             //// this is the copy of start button click 
-            public void PressedStopButton()
+             void PressedStopButton()
             {
                 keypressed_label.Text = "Stop";
 
@@ -647,17 +568,16 @@ namespace typing_and_clicking
                 button2.Enabled = false;
                 Console.WriteLine(keypressed_label.Text);
 
-        }
+            }
 
             //// this is the copy of start button click 
-            public void PressedResetButton()
+             void PressedResetButton()
             {
+
                 keypressed_label.Text = "Reset";
 
                 button1.Enabled = true;
                 button2.Enabled = true;
-
-
 
                 mouse_click_counter = 0;
                 key_typing_counter = 0;
@@ -692,12 +612,10 @@ namespace typing_and_clicking
                 timer2.Stop();
                 Console.WriteLine(keypressed_label.Text);
 
-        }
-         
-        #endregion Key press detect
+            }
 
+        #endregion Key press detect
+         
          
     }
 }
-
- 
