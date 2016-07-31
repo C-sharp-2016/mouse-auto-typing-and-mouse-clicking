@@ -113,7 +113,7 @@ namespace typing_and_clicking
 
         private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
         private const int MOUSEEVENTF_LEFTUP = 0x0004;
-
+  
         private void timer4_Tick(object sender, EventArgs e)
         {
             //Change the title while app is working.. 
