@@ -518,7 +518,18 @@ namespace typing_and_clicking
                     if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
                         PressedStopButton();
-                    }  
+                    }
+                     
+                    else if ((Keyboard.GetKeyStates(Key.H) & KeyStates.Down) > 0)
+                    {
+                        this.Hide();
+                    }
+
+                    else if ((Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0)
+                    {
+                        this.Show();
+                    }
+
                 }
             }
 
