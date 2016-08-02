@@ -1,6 +1,36 @@
 
-Log Entry : 1:08:33 AM Wednesday, August 03, 2016
+Log Entry : 1:13:47 AM Wednesday, August 03, 2016
+  : Time Interval: 1 Seconds
+ Total Click: 0
+ Total Typing: 0
+----------------------------------------------------------------------------------
+
+Log Entry : 1:13:48 AM Wednesday, August 03, 2016
+  : Time Interval: 1 Seconds
+ Total Click: 0
+ Total Typing: 6
+----------------------------------------------------------------------------------
+
+Log Entry : 1:13:49 AM Wednesday, August 03, 2016
+  : Time Interval: 1 Seconds
+ Total Click: 1
+ Total Typing: 1
+----------------------------------------------------------------------------------
+
+Log Entry : 1:14:03 AM Wednesday, August 03, 2016
   : Time Interval: 5 Seconds
- Total Click: 17
- Total Typing: 15
+ Total Click: 4
+ Total Typing: 14
+----------------------------------------------------------------------------------
+
+Log Entry : 1:14:08 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 2
+ Total Typing: 11
+----------------------------------------------------------------------------------
+
+Log Entry : 1:14:34 AM Wednesday, August 03, 2016
+  : Time Interval: 1 Minutes
+ Total Click: 9
+ Total Typing: 19
 ----------------------------------------------------------------------------------

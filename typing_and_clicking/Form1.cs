@@ -18,7 +18,9 @@ namespace typing_and_clicking
 {
     public partial class Form1 : Form
     { 
-        private int log_click_total = 0, log_typing_total = 0; 
+
+
+        private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
 
@@ -192,9 +194,7 @@ namespace typing_and_clicking
         {
 
 
-            Log log = new Log();
-
-
+            
             
             seconds++; 
             
@@ -243,7 +243,7 @@ namespace typing_and_clicking
             * if hour is zero then dont play sounds
             * just play once and dont repeat it
             */
-            int sounds_time_play_value  = Int32.Parse(sounds_time_play_value_textBox5.Text); 
+            sounds_time_play_value  = Int32.Parse(sounds_time_play_value_textBox5.Text); 
 
             if (sounds_time_play_type_comboBox1.Text == "Hours")
             {
@@ -262,6 +262,8 @@ namespace typing_and_clicking
                                 {
                                     send_key_ctr_plus_tab();
                                 }
+
+                                setMessageLog();
                             }
                         }  
                     }
@@ -285,7 +287,9 @@ namespace typing_and_clicking
                                 if (ctr_plug_tab_checkbox1.Checked == true)
                                 {
                                     send_key_ctr_plus_tab();
-                                } 
+                                }
+
+                                setMessageLog();
                             }
                         } 
                     }
@@ -310,17 +314,8 @@ namespace typing_and_clicking
                                 {
                                     send_key_ctr_plus_tab();
                                 }
-                                 
-                                // add log 
-                                log.addText( 
-                                    " Time Interval: " + sounds_time_play_value + " "  + sounds_time_play_type_comboBox1.Text + "\n" +
-                                    " Total Click: " + log_click_total +  "\n" + 
-                                    " Total Typing: " + log_typing_total
-                                );
-                                 
-                                // refresh total typing and clicking for log
-                                log_click_total = 0;
-                                log_typing_total = 0;
+
+                                setMessageLog(); 
                             }  
                         }  
                     }
@@ -334,6 +329,22 @@ namespace typing_and_clicking
         }
 
 
+
+        void setMessageLog()
+        {
+            Log log = new Log();
+             
+            // add log 
+            log.addText(
+                " Time Interval: " + sounds_time_play_value + " " + sounds_time_play_type_comboBox1.Text + "\n" +
+                " Total Click: " + log_click_total + "\n" +
+                " Total Typing: " + log_typing_total
+            );
+
+            // refresh total typing and clicking for log
+            log_click_total = 0;
+            log_typing_total = 0;
+        }
 
 
         void send_key_ctr_plus_tab()
