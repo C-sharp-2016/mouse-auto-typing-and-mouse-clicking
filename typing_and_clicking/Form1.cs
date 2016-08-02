@@ -23,6 +23,8 @@ namespace typing_and_clicking
         private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
+         
+        private string  sounds_src = ""; 
 
         private int s1, s2 = 100, n1, r1, key_typing_counter,mouse_click_counter;
         private int moveFast = 0;
@@ -74,8 +76,18 @@ namespace typing_and_clicking
             Console.WriteLine("Clicking Pause " + timer2.Interval);
 
             log_click_total++;
-             
-              
+
+
+
+
+            sounds_src = "http://themezz.com/files/Sounds/Click-5.wav";
+            Thread th = new Thread(playSoundsDynamic);
+            th.Start(); 
+
+            
+          
+
+
         }
 
         public Form1()
@@ -353,6 +365,30 @@ namespace typing_and_clicking
         }
 
 
+
+
+        /**
+        * src: http://www.soundjay.com/typewriter-sounds.html
+        * src: http://www.grsites.com/archive/sounds/category/23/
+        * src: http://www.soundjig.com/pages/soundfx/beeps.html
+        */
+
+        void playSoundsDynamic()
+        { 
+            SoundPlayer sound = new SoundPlayer(@"" + sounds_src + ""); 
+            sound.Play();
+        }
+
+
+
+
+
+
+
+
+
+
+
         /**  
            sample beep inputs: 
 
@@ -380,10 +416,13 @@ namespace typing_and_clicking
             //only play shouds if auto typing and clicking is activated
             if(button1.Enabled == false && playSoundStatus == true)
             { 
-                int frequency = Int32.Parse("626");
-                int duration = Int32.Parse(sound_duration_textBox5.Text);
-                Console.Beep(frequency, duration);
+                 int frequency = Int32.Parse("626");
+                 int duration = Int32.Parse(sound_duration_textBox5.Text);
+                 Console.Beep(frequency, duration);
 
+                 
+                //SoundPlayer simpleSound = new SoundPlayer(@"http://static1.grsites.com/archive/sounds/cartoon/cartoon008.wav");
+                //simpleSound.Play(); 
             }
             //  }
 
@@ -510,7 +549,12 @@ namespace typing_and_clicking
 
             log_typing_total++;
 
+            
 
+            sounds_src = "sound/typewriter-key-1.wav";
+            Thread th = new Thread(playSoundsDynamic);
+            th.Start();
+             
         }
 
 
@@ -527,7 +571,7 @@ namespace typing_and_clicking
         #region Key press detect
 
 
-            private bool isRunning = true;
+        private bool isRunning = true;
             private int pressed = 0;
 
 

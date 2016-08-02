@@ -34,3 +34,177 @@ Log Entry : 1:14:34 AM Wednesday, August 03, 2016
  Total Click: 9
  Total Typing: 19
 ----------------------------------------------------------------------------------
+
+Log Entry : 1:19:31 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 4
+ Total Typing: 14
+----------------------------------------------------------------------------------
+
+Log Entry : 1:26:55 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 2
+ Total Typing: 14
+----------------------------------------------------------------------------------
+
+Log Entry : 1:27:00 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 4
+ Total Typing: 10
+----------------------------------------------------------------------------------
+
+Log Entry : 1:27:16 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 7
+ Total Typing: 24
+----------------------------------------------------------------------------------
+
+Log Entry : 1:27:21 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 2
+ Total Typing: 12
+----------------------------------------------------------------------------------
+
+Log Entry : 1:27:26 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 3
+ Total Typing: 7
+----------------------------------------------------------------------------------
+
+Log Entry : 1:28:25 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 1
+ Total Typing: 10
+----------------------------------------------------------------------------------
+
+Log Entry : 1:28:30 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 0
+ Total Typing: 6
+----------------------------------------------------------------------------------
+
+Log Entry : 1:28:40 AM Wednesday, August 03, 2016
+  : Time Interval: 5 Seconds
+ Total Click: 5
+ Total Typing: 6
+----------------------------------------------------------------------------------
+
+Log Entry : 1:32:59 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 2
+ Total Typing: 7
+----------------------------------------------------------------------------------
+
+Log Entry : 1:33:09 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 8
+ Total Typing: 11
+----------------------------------------------------------------------------------
+
+Log Entry : 1:38:14 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 4
+ Total Typing: 11
+----------------------------------------------------------------------------------
+
+Log Entry : 1:38:25 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 6
+ Total Typing: 12
+----------------------------------------------------------------------------------
+
+Log Entry : 1:39:34 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 3
+ Total Typing: 9
+----------------------------------------------------------------------------------
+
+Log Entry : 1:39:48 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 5
+ Total Typing: 10
+----------------------------------------------------------------------------------
+
+Log Entry : 1:39:59 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 7
+ Total Typing: 12
+----------------------------------------------------------------------------------
+
+Log Entry : 1:40:11 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 10
+ Total Typing: 10
+----------------------------------------------------------------------------------
+
+Log Entry : 1:40:23 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 7
+ Total Typing: 10
+----------------------------------------------------------------------------------
+
+Log Entry : 1:40:48 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 15
+ Total Typing: 28
+----------------------------------------------------------------------------------
+
+Log Entry : 1:57:22 AM Wednesday, August 03, 2016
+  : Time Interval: 20 Seconds
+ Total Click: 1
+ Total Typing: 6
+----------------------------------------------------------------------------------
+
+Log Entry : 1:57:49 AM Wednesday, August 03, 2016
+  : Time Interval: 20 Seconds
+ Total Click: 26
+ Total Typing: 25
+----------------------------------------------------------------------------------
+
+Log Entry : 2:02:47 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 3
+ Total Typing: 14
+----------------------------------------------------------------------------------
+
+Log Entry : 2:02:57 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 3
+ Total Typing: 6
+----------------------------------------------------------------------------------
+
+Log Entry : 2:03:07 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 3
+ Total Typing: 12
+----------------------------------------------------------------------------------
+
+Log Entry : 2:03:26 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 6
+ Total Typing: 24
+----------------------------------------------------------------------------------
+
+Log Entry : 2:03:47 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 5
+ Total Typing: 21
+----------------------------------------------------------------------------------
+
+Log Entry : 2:03:57 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 20
+ Total Typing: 26
+----------------------------------------------------------------------------------
+
+Log Entry : 2:04:07 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 15
+ Total Typing: 19
+----------------------------------------------------------------------------------
+
+Log Entry : 2:04:36 AM Wednesday, August 03, 2016
+  : Time Interval: 10 Seconds
+ Total Click: 29
+ Total Typing: 48
+----------------------------------------------------------------------------------
