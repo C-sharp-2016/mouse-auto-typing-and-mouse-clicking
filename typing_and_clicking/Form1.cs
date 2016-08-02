@@ -17,10 +17,8 @@ using System.Windows.Input;
 namespace typing_and_clicking
 {
     public partial class Form1 : Form
-    {
-
-
-
+    { 
+        private int log_click_total = 0, log_typing_total = 0; 
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
 
@@ -72,6 +70,8 @@ namespace typing_and_clicking
             //Console.WriteLine("Typing Pause " + s2);
 
             Console.WriteLine("Clicking Pause " + timer2.Interval);
+
+            log_click_total++;
              
               
         }
@@ -190,7 +190,12 @@ namespace typing_and_clicking
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-             
+
+
+            Log log = new Log();
+
+
+            
             seconds++; 
             
             if (seconds > 59)
@@ -280,7 +285,7 @@ namespace typing_and_clicking
                                 if (ctr_plug_tab_checkbox1.Checked == true)
                                 {
                                     send_key_ctr_plus_tab();
-                                }
+                                } 
                             }
                         } 
                     }
@@ -305,6 +310,17 @@ namespace typing_and_clicking
                                 {
                                     send_key_ctr_plus_tab();
                                 }
+                                 
+                                // add log 
+                                log.addText( 
+                                    " Time Interval: " + sounds_time_play_value + " "  + sounds_time_play_type_comboBox1.Text + "\n" +
+                                    " Total Click: " + log_click_total +  "\n" + 
+                                    " Total Typing: " + log_typing_total
+                                );
+                                 
+                                // refresh total typing and clicking for log
+                                log_click_total = 0;
+                                log_typing_total = 0;
                             }  
                         }  
                     }
@@ -479,7 +495,11 @@ namespace typing_and_clicking
             // form title changing while app is running
             string str = "..........";
             this.Text = str.Substring(0, r.Next(1, str.Length));
-             
+
+
+            log_typing_total++;
+
+
         }
 
 
