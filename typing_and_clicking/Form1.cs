@@ -12,8 +12,7 @@ using System.Threading;
 using System.IO;
 using System.Media;
 using System.Windows.Input;
-
-
+ 
 namespace typing_and_clicking
 {
     public partial class Form1 : Form
@@ -55,39 +54,43 @@ namespace typing_and_clicking
 
 
         private void timer2_Tick(object sender, EventArgs e)
-        {
+        { 
+            if (enable_click_checkbox1.Checked == true)
+            { 
+                try
+                { 
+                    Console.WriteLine("timer 2 ticking"); 
+                    Random r = new Random(); 
 
-            Console.WriteLine("timer 2 ticking");
+                    timer2.Interval = r.Next(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
+                    mouse_click_counter++;
 
+                    int x = System.Windows.Forms.Cursor.Position.X;
+                    int y = System.Windows.Forms.Cursor.Position.Y;
 
-            Random r = new Random();
+                    Clicker(x, y);
 
-            timer2.Interval = r.Next(int.Parse(textBox3.Text), int.Parse(textBox4.Text)); 
-            mouse_click_counter++;
+                    label4.Text = mouse_click_counter.ToString();
+                    //Console.WriteLine("Typing Pause " + s2);
 
-            int x = System.Windows.Forms.Cursor.Position.X;
-            int y = System.Windows.Forms.Cursor.Position.Y;
-             
-            Clicker(x, y);
-             
-            label4.Text = mouse_click_counter.ToString();
-            //Console.WriteLine("Typing Pause " + s2);
+                    Console.WriteLine("Clicking Pause " + timer2.Interval);
 
-            Console.WriteLine("Clicking Pause " + timer2.Interval);
-
-            log_click_total++;
-
-
-
-
-            sounds_src = "http://themezz.com/files/Sounds/Click-5.wav";
-            Thread th = new Thread(playSoundsDynamic);
-            th.Start(); 
-
-            
-          
+                    log_click_total++;
 
 
+
+                    sounds_src = "sound/Mouse_click.wav";
+                    Thread th = new Thread(playSoundsDynamic);
+                    th.Start();
+
+
+                }
+                catch (Exception ex)
+                {
+                    Log lg = new Log();
+                    lg.addText(" Error handling clicking " + ex.Message);
+                }
+            } 
         }
 
         public Form1()
@@ -115,9 +118,9 @@ namespace typing_and_clicking
             sound_duration_textBox5.Text = "2000";
              
             ctr_plug_tab_checkbox1.Checked = true;
-
-
-
+            enable_click_checkbox1.Checked = true;
+            enable_typing_checkbox2.Checked = true;
+             
             // time
             timer3.Start();
 
@@ -190,10 +193,11 @@ namespace typing_and_clicking
             textBox2.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
-            sound_duration_textBox5.Enabled = true;
-
+            sound_duration_textBox5.Enabled = true; 
             sounds_time_play_type_comboBox1.Enabled = true;
-            sounds_time_play_value_textBox5.Enabled = true; 
+            sounds_time_play_value_textBox5.Enabled = true;
+            enable_click_checkbox1.Enabled = true;
+            enable_typing_checkbox2.Enabled = true; 
             ctr_plug_tab_checkbox1.Enabled = true;
 
 
@@ -206,138 +210,146 @@ namespace typing_and_clicking
         {
 
 
-            
-            
-            seconds++; 
-            
-            if (seconds > 59)
-            {
-                minutes++;   
-                seconds = 1; 
-            } 
-            if (minutes > 59)
-            { 
-                hours++;
-                minutes = 1; 
-            }
-               
-            if (seconds.ToString().Length == 1)
-            {
-                seconds_zero = "0"; 
-            }
-            else
-            {
-                seconds_zero = "";
-            }
-             
-            if (minutes.ToString().Length == 1)
-            {
-                minutes_zero = "0";
-            }
-            else
-            {
-                minutes_zero = "";
-            }
-             
-            if (hours.ToString().Length == 1)
-            {
-                hours_zero = "0";
-            }
-            else
-            {
-                hours_zero = "";
-            }
-             
 
-            /**
-            * Sound Beep Start
-            * Hours has a bug
-            * if hour is zero then dont play sounds
-            * just play once and dont repeat it
-            */
-            sounds_time_play_value  = Int32.Parse(sounds_time_play_value_textBox5.Text); 
 
-            if (sounds_time_play_type_comboBox1.Text == "Hours")
-            {
-                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " hours ");
-                if (hours % sounds_time_play_value == 0)
+            try {
+
+
+                seconds++;
+
+                if (seconds > 59)
                 {
-                    if(hours != 0) {  
-                        if(prevHour != hours) {
-                            if (button1.Enabled == false)
-                            {
-                                Thread th = new Thread(playSounds);
-                                th.Start();
-                                prevHour = hours;
+                    minutes++;
+                    seconds = 1;
+                }
+                if (minutes > 59)
+                {
+                    hours++;
+                    minutes = 1;
+                }
 
-                                if (ctr_plug_tab_checkbox1.Checked == true)
+                if (seconds.ToString().Length == 1)
+                {
+                    seconds_zero = "0";
+                }
+                else
+                {
+                    seconds_zero = "";
+                }
+
+                if (minutes.ToString().Length == 1)
+                {
+                    minutes_zero = "0";
+                }
+                else
+                {
+                    minutes_zero = "";
+                }
+
+                if (hours.ToString().Length == 1)
+                {
+                    hours_zero = "0";
+                }
+                else
+                {
+                    hours_zero = "";
+                }
+
+
+                /**
+                * Sound Beep Start
+                * Hours has a bug
+                * if hour is zero then dont play sounds
+                * just play once and dont repeat it
+                */
+                sounds_time_play_value = Int32.Parse(sounds_time_play_value_textBox5.Text);
+
+                if (sounds_time_play_type_comboBox1.Text == "Hours")
+                {
+                    //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " hours ");
+                    if (hours % sounds_time_play_value == 0)
+                    {
+                        if (hours != 0) {
+                            if (prevHour != hours) {
+                                if (button1.Enabled == false)
                                 {
-                                    send_key_ctr_plus_tab();
-                                }
+                                    Thread th = new Thread(playSounds);
+                                    th.Start();
+                                    prevHour = hours;
 
-                                setMessageLog();
+                                    if (ctr_plug_tab_checkbox1.Checked == true)
+                                    {
+                                        send_key_ctr_plus_tab();
+                                    }
+
+                                    setMessageLog();
+                                }
                             }
-                        }  
+                        }
                     }
                 }
-            }
-            else if (sounds_time_play_type_comboBox1.Text == "Minutes")
-            {
-                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " mins ");
-                if (minutes % sounds_time_play_value == 0)
+                else if (sounds_time_play_type_comboBox1.Text == "Minutes")
                 {
-                    if (minutes != 0)
+                    //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " mins ");
+                    if (minutes % sounds_time_play_value == 0)
                     {
-                        if (prevMin != minutes)
+                        if (minutes != 0)
                         {
-                            if (button1.Enabled == false)
+                            if (prevMin != minutes)
                             {
-                                Thread th = new Thread(playSounds);
-                                th.Start();
-                                prevMin = minutes;
-
-                                if (ctr_plug_tab_checkbox1.Checked == true)
+                                if (button1.Enabled == false)
                                 {
-                                    send_key_ctr_plus_tab();
-                                }
+                                    Thread th = new Thread(playSounds);
+                                    th.Start();
+                                    prevMin = minutes;
 
-                                setMessageLog();
+                                    if (ctr_plug_tab_checkbox1.Checked == true)
+                                    {
+                                        send_key_ctr_plus_tab();
+                                    }
+
+                                    setMessageLog();
+                                }
                             }
-                        } 
+                        }
                     }
                 }
-            }
-            else if (sounds_time_play_type_comboBox1.Text == "Seconds")
-            {
-                //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " seconds ");
-                if (seconds % sounds_time_play_value == 0)
+                else if (sounds_time_play_type_comboBox1.Text == "Seconds")
                 {
-                    if (seconds != 0)
+                    //Console.WriteLine(" Sounds will play every  " + sounds_time_play_value_textBox5.Text + " seconds ");
+                    if (seconds % sounds_time_play_value == 0)
                     {
-                        if (prevSec != seconds)
-                        { 
-                            if(button1.Enabled == false) { 
+                        if (seconds != 0)
+                        {
+                            if (prevSec != seconds)
+                            {
+                                if (button1.Enabled == false) {
 
-                                Thread th = new Thread(playSounds);
-                                th.Start();
-                                prevSec = seconds; 
+                                    Thread th = new Thread(playSounds);
+                                    th.Start();
+                                    prevSec = seconds;
 
-                                if (ctr_plug_tab_checkbox1.Checked == true)
-                                {
-                                    send_key_ctr_plus_tab();
+                                    if (ctr_plug_tab_checkbox1.Checked == true)
+                                    {
+                                        send_key_ctr_plus_tab();
+                                    }
+
+                                    setMessageLog();
                                 }
-
-                                setMessageLog(); 
-                            }  
-                        }  
+                            }
+                        }
                     }
                 }
+                /**
+                * Beed Sounds End
+                */
+                label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
             }
-            /**
-            * Beed Sounds End
-            */ 
-            label10.Text = hours_zero + hours.ToString() + " : " + minutes_zero + minutes.ToString() + " : " + seconds_zero + seconds.ToString();
-
+            catch ( Exception ex)
+            {
+                Log lg = new Log();
+                lg.addText(" Error Exception Message: " + ex.Message); 
+            } 
         }
 
 
@@ -348,9 +360,11 @@ namespace typing_and_clicking
              
             // add log 
             log.addText(
-                " Time Interval: " + sounds_time_play_value + " " + sounds_time_play_type_comboBox1.Text + "\n" +
-                " Total Click: " + log_click_total + "\n" +
-                " Total Typing: " + log_typing_total
+                "Time Interval: " + sounds_time_play_value + " " + sounds_time_play_type_comboBox1.Text + "\n" +
+                "Typing time interval between " + textBox1.Text + " and " + textBox2.Text + "\n" +
+                "Clicking time interval between " + textBox3.Text + " and " + textBox4.Text + "\n" +
+                "Total Click: " + log_click_total + "\n" +
+                "Total Typing: " + log_typing_total 
             );
 
             // refresh total typing and clicking for log
@@ -416,33 +430,21 @@ namespace typing_and_clicking
             //only play shouds if auto typing and clicking is activated
             if(button1.Enabled == false && playSoundStatus == true)
             { 
-                 //int frequency = Int32.Parse("626");
-                 //int duration = Int32.Parse(sound_duration_textBox5.Text);
-                 //Console.Beep(frequency, duration);
-
-                 
-                 SoundPlayer simpleSound = new SoundPlayer(@"http://static1.grsites.com/archive/sounds/cartoon/cartoon008.wav");
-                 simpleSound.Play(); 
+                 int frequency = Int32.Parse("626");
+                 int duration = Int32.Parse(sound_duration_textBox5.Text);
+                 Console.Beep(frequency, duration);   
+                 //SoundPlayer simpleSound = new SoundPlayer(@"http://static1.grsites.com/archive/sounds/cartoon/cartoon008.wav");
+                 //simpleSound.Play(); 
             }
-            //  }
+            //}  
+        } 
 
-        }
-
-        private const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
-
-
+        private const int MOUSEEVENTF_RIGHTDOWN = 0x0008; 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            keypressed_label.Text = "Start";
-
-
+        { 
+            keypressed_label.Text = "Start"; 
             timer1.Start();
-            timer2.Start();
-           
-
-
+            timer2.Start(); 
             //enable fields for interval
             textBox1.Enabled = false;
             textBox2.Enabled = false;
@@ -451,7 +453,10 @@ namespace typing_and_clicking
             sound_duration_textBox5.Enabled = false;
             sounds_time_play_type_comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
-            ctr_plug_tab_checkbox1.Enabled = false;
+            ctr_plug_tab_checkbox1.Enabled = false;  
+            enable_click_checkbox1.Enabled = false;
+            enable_typing_checkbox2.Enabled = false;
+
 
 
             button1.Enabled = false;
@@ -486,6 +491,8 @@ namespace typing_and_clicking
             sounds_time_play_type_comboBox1.Enabled = true;
             sounds_time_play_value_textBox5.Enabled = true;
             ctr_plug_tab_checkbox1.Enabled = true;
+            enable_click_checkbox1.Enabled = true;
+            enable_typing_checkbox2.Enabled = true;
 
             button1.Enabled = true;
             button2.Enabled = false;
@@ -497,64 +504,74 @@ namespace typing_and_clicking
             // change time limit for sleep 
             // new MouseEventArgs(System.Windows.Forms.MouseButtons.Left, 1, 1, 1, 1);
 
-
-
-            Console.WriteLine("timer 1 ticking");
-            int sleepLimit = 1000;
-
-            Random r = new Random();
-            n1 = r.Next(0, randKey.Length); // select letters
-
-
-            //move fast 5 times only
-            if (s2 < 500 && moveFast == 0)
-            {
-                moveFast = 5;
-            }
-            else if (moveFast <= 0)
-            {
-                moveFast = 0;
-                //random numbers 
-                r1 = r.Next(0, 1000); // will tell when we will do the pause or sleep
-                s1 = r.Next(0, 30) * sleepLimit;  // sleep limit seconds
-                s2 = r.Next(int.Parse(textBox1.Text), int.Parse(textBox2.Text));  // seconds interval
-            }
-            else
-            {
-                moveFast--;
-
-                if (moveFast == 0)
+  
+            if (enable_typing_checkbox2.Checked == true)
+            { 
+                try
                 {
-                    s2 = 1000;
+
+                    Console.WriteLine("timer 1 ticking");
+                    int sleepLimit = 1000;
+
+                    Random r = new Random();
+                    n1 = r.Next(0, randKey.Length); // select letters
+
+
+                    //move fast 5 times only
+                    if (s2 < 500 && moveFast == 0)
+                    {
+                        moveFast = 5;
+                    }
+                    else if (moveFast <= 0)
+                    {
+                        moveFast = 0;
+                        //random numbers 
+                        r1 = r.Next(0, 1000); // will tell when we will do the pause or sleep
+                        s1 = r.Next(0, 30) * sleepLimit;  // sleep limit seconds
+                        s2 = r.Next(int.Parse(textBox1.Text), int.Parse(textBox2.Text));  // seconds interval
+                    }
+                    else
+                    {
+                        moveFast--;
+
+                        if (moveFast == 0)
+                        {
+                            s2 = 1000;
+                        }
+                    }
+
+                    timer1.Interval = s2;
+                    key_typing_counter++;
+
+                    // send key to our ui desktop
+                    SendKeys.Send(randKey[n1]);
+
+                    label1.Text = key_typing_counter.ToString();
+
+
+                    Console.WriteLine("Typing Pause " + s2);
+
+
+
+                    // form title changing while app is running
+                    string str = "..........";
+                    this.Text = str.Substring(0, r.Next(1, str.Length));
+
+
+                    log_typing_total++;
+
+
+
+                    sounds_src = "sound/typewriter-key-1.wav";
+                    Thread th = new Thread(playSoundsDynamic);
+                    th.Start();
+                }
+                catch (Exception ex)
+                {
+                    Log lg = new Log();
+                    lg.addText(" Error handling typing message: " + ex.Message);
                 }
             }
-
-            timer1.Interval = s2;
-            key_typing_counter++;
-             
-            // send key to our ui desktop
-            SendKeys.Send(randKey[n1]);
-             
-            label1.Text = key_typing_counter.ToString();
-
-
-            Console.WriteLine( "Typing Pause " + s2);
-
-
-
-            // form title changing while app is running
-            string str = "..........";
-            this.Text = str.Substring(0, r.Next(1, str.Length));
-
-
-            log_typing_total++;
-
-            
-
-            sounds_src = "sound/typewriter-key-1.wav";
-            Thread th = new Thread(playSoundsDynamic);
-            th.Start();
-             
         }
 
 
@@ -571,7 +588,7 @@ namespace typing_and_clicking
         #region Key press detect
 
 
-        private bool isRunning = true;
+            private bool isRunning = true;
             private int pressed = 0;
 
 
@@ -588,7 +605,7 @@ namespace typing_and_clicking
             {
                 while (isRunning)
                 {
-                    Thread.Sleep(100);
+                    Thread.Sleep(800);
 
                     if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
@@ -642,8 +659,10 @@ namespace typing_and_clicking
                 sounds_time_play_type_comboBox1.Enabled = false;
                 sounds_time_play_value_textBox5.Enabled = false;
                 ctr_plug_tab_checkbox1.Enabled = false;
+                enable_click_checkbox1.Enabled = false;
+                enable_typing_checkbox2.Enabled = false;
 
-                button1.Enabled = false;
+            button1.Enabled = false;
                 button2.Enabled = true;
 
 
@@ -672,9 +691,11 @@ namespace typing_and_clicking
                 sounds_time_play_type_comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
                 ctr_plug_tab_checkbox1.Enabled = true;
+                enable_click_checkbox1.Enabled = true;
+                enable_typing_checkbox2.Enabled = true;
 
 
-                button1.Enabled = true;
+            button1.Enabled = true;
                 button2.Enabled = false;
                 Console.WriteLine(keypressed_label.Text);
 
@@ -713,16 +734,15 @@ namespace typing_and_clicking
                 textBox2.Enabled = true;
                 textBox3.Enabled = true;
                 textBox4.Enabled = true;
-                sound_duration_textBox5.Enabled = true; 
-
+                sound_duration_textBox5.Enabled = true;  
                 sounds_time_play_type_comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
                 ctr_plug_tab_checkbox1.Enabled = true;
-
+                enable_click_checkbox1.Enabled = true;
+                enable_typing_checkbox2.Enabled = true; 
                 timer1.Stop();
                 timer2.Stop();
-                Console.WriteLine(keypressed_label.Text);
-
+                Console.WriteLine(keypressed_label.Text); 
             }
 
         #endregion Key press detect

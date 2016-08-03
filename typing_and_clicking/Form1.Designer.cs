@@ -60,6 +60,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.enable_click_checkbox1 = new System.Windows.Forms.CheckBox();
+            this.enable_typing_checkbox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -269,7 +271,7 @@
             // ctr_plug_tab_checkbox1
             // 
             this.ctr_plug_tab_checkbox1.AutoSize = true;
-            this.ctr_plug_tab_checkbox1.Location = new System.Drawing.Point(126, 284);
+            this.ctr_plug_tab_checkbox1.Location = new System.Drawing.Point(125, 331);
             this.ctr_plug_tab_checkbox1.Name = "ctr_plug_tab_checkbox1";
             this.ctr_plug_tab_checkbox1.Size = new System.Drawing.Size(15, 14);
             this.ctr_plug_tab_checkbox1.TabIndex = 23;
@@ -278,7 +280,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 281);
+            this.label9.Location = new System.Drawing.Point(14, 328);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 13);
             this.label9.TabIndex = 24;
@@ -296,7 +298,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 336);
+            this.label12.Location = new System.Drawing.Point(16, 383);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(139, 13);
             this.label12.TabIndex = 26;
@@ -305,7 +307,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(16, 376);
+            this.label13.Location = new System.Drawing.Point(15, 423);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 27;
@@ -314,7 +316,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 356);
+            this.label14.Location = new System.Drawing.Point(15, 403);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 13);
             this.label14.TabIndex = 28;
@@ -323,17 +325,41 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 313);
+            this.label15.Location = new System.Drawing.Point(16, 360);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(219, 13);
             this.label15.TabIndex = 29;
             this.label15.Text = "      -------------KEYBOARD SHORTCUT-----------";
             // 
+            // enable_click_checkbox1
+            // 
+            this.enable_click_checkbox1.AutoSize = true;
+            this.enable_click_checkbox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.enable_click_checkbox1.Location = new System.Drawing.Point(36, 284);
+            this.enable_click_checkbox1.Name = "enable_click_checkbox1";
+            this.enable_click_checkbox1.Size = new System.Drawing.Size(102, 17);
+            this.enable_click_checkbox1.TabIndex = 30;
+            this.enable_click_checkbox1.Text = "Enable Clicking:";
+            this.enable_click_checkbox1.UseVisualStyleBackColor = true;
+            // 
+            // enable_typing_checkbox2
+            // 
+            this.enable_typing_checkbox2.AutoSize = true;
+            this.enable_typing_checkbox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.enable_typing_checkbox2.Location = new System.Drawing.Point(41, 307);
+            this.enable_typing_checkbox2.Name = "enable_typing_checkbox2";
+            this.enable_typing_checkbox2.Size = new System.Drawing.Size(97, 17);
+            this.enable_typing_checkbox2.TabIndex = 31;
+            this.enable_typing_checkbox2.Text = "Enable Typing:";
+            this.enable_typing_checkbox2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 397);
+            this.ClientSize = new System.Drawing.Size(272, 442);
+            this.Controls.Add(this.enable_typing_checkbox2);
+            this.Controls.Add(this.enable_click_checkbox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -404,6 +430,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox enable_click_checkbox1;
+        private System.Windows.Forms.CheckBox enable_typing_checkbox2;
     }
 }
 

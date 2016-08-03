@@ -13,22 +13,30 @@ namespace typing_and_clicking
          
         public void addText(string msg)
         {
-            using (StreamWriter w = File.AppendText("log/log.txt"))
+            try {
+
+
+                using (StreamWriter w = File.AppendText("log/log.txt"))
+                {
+                    logMessage(msg, w);
+                }
+
+                using (StreamReader r = File.OpenText("log/log.txt"))
+                {
+                    dumpLog(r);
+                }
+            }
+            catch (Exception ex)
             {
-                logMessage(msg, w);
+                this.addText("Error logging message : " + ex.Message);  
             }
 
-            using (StreamReader r = File.OpenText("log/log.txt"))
-            {
-                dumpLog(r);
-            }
         }
 
         public static void logMessage(string logMessage, TextWriter w)
-        {
-            w.Write("\r\nLog Entry : ");
-            w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
-            w.WriteLine("  :{0}", logMessage);
+        { 
+            w.WriteLine("Log Entry : {0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
+            w.WriteLine(":{0}", logMessage);
             w.WriteLine("----------------------------------------------------------------------------------");
         }
 
