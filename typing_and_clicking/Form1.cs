@@ -104,12 +104,12 @@ namespace typing_and_clicking
              
             // typing interval
             textBox1.Text = "100";
-            textBox2.Text = "2000";
+            textBox2.Text = "5000";
 
 
             //clicking interval
             textBox3.Text = "100";
-            textBox4.Text = "3000";
+            textBox4.Text = "7000";
 
 
             sound_duration_textBox5.Text = "2000";
@@ -171,12 +171,12 @@ namespace typing_and_clicking
 
             // typing interval
             textBox1.Text = "100";
-            textBox2.Text = "2000";
+            textBox2.Text = "5000";
 
 
             //clicking interval
             textBox3.Text = "100";
-            textBox4.Text = "3000";
+            textBox4.Text = "7000";
 
             // typing times
             label1.Text = "0";
@@ -416,13 +416,13 @@ namespace typing_and_clicking
             //only play shouds if auto typing and clicking is activated
             if(button1.Enabled == false && playSoundStatus == true)
             { 
-                 int frequency = Int32.Parse("626");
-                 int duration = Int32.Parse(sound_duration_textBox5.Text);
-                 Console.Beep(frequency, duration);
+                 //int frequency = Int32.Parse("626");
+                 //int duration = Int32.Parse(sound_duration_textBox5.Text);
+                 //Console.Beep(frequency, duration);
 
                  
-                //SoundPlayer simpleSound = new SoundPlayer(@"http://static1.grsites.com/archive/sounds/cartoon/cartoon008.wav");
-                //simpleSound.Play(); 
+                 SoundPlayer simpleSound = new SoundPlayer(@"http://static1.grsites.com/archive/sounds/cartoon/cartoon008.wav");
+                 simpleSound.Play(); 
             }
             //  }
 
