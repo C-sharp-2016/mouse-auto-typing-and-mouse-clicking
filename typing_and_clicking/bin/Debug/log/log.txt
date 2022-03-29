@@ -208,3 +208,311 @@ Log Entry : 2:04:36 AM Wednesday, August 03, 2016
  Total Click: 29
  Total Typing: 48
 ----------------------------------------------------------------------------------
+Log Entry : 8:22:34 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 189
+----------------------------------------------------------------------------------
+Log Entry : 8:22:35 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:22:51 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 8:22:52 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 8:22:53 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 8:22:54 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 8:22:55 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:22:56 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 8:22:57 AM Tuesday, March 29, 2022
+:Time Interval: 1 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:34:41 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 8:34:46 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:34:51 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 2
+----------------------------------------------------------------------------------
+Log Entry : 8:34:56 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 3
+----------------------------------------------------------------------------------
+Log Entry : 8:36:02 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 1
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 8:36:07 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 1
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:36:12 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 2
+Total Typing: 3
+----------------------------------------------------------------------------------
+Log Entry : 8:37:22 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 8:37:27 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 4
+----------------------------------------------------------------------------------
+Log Entry : 8:39:09 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 1
+Total Typing: 9
+----------------------------------------------------------------------------------
+Log Entry : 8:40:09 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 6
+----------------------------------------------------------------------------------
+Log Entry : 8:53:42 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 8:53:47 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:53:52 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 2
+----------------------------------------------------------------------------------
+Log Entry : 8:53:57 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 3
+----------------------------------------------------------------------------------
+Log Entry : 8:54:02 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 8:54:07 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 2
+----------------------------------------------------------------------------------
+Log Entry : 8:54:12 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 6
+----------------------------------------------------------------------------------
+Log Entry : 8:54:17 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 4
+----------------------------------------------------------------------------------
+Log Entry : 9:05:03 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 9:05:12 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 9:05:22 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 9:05:27 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 9:05:32 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 9:05:37 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 9:05:42 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 9:11:22 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 9:11:27 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 4
+----------------------------------------------------------------------------------
+Log Entry : 9:11:32 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 5
+----------------------------------------------------------------------------------
+Log Entry : 9:11:37 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 9:11:42 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 2
+----------------------------------------------------------------------------------
+Log Entry : 9:11:47 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 9:11:52 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 3
+----------------------------------------------------------------------------------
+Log Entry : 9:11:57 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 9:12:02 AM Tuesday, March 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 7000
+Total Click: 0
+Total Typing: 2
+----------------------------------------------------------------------------------

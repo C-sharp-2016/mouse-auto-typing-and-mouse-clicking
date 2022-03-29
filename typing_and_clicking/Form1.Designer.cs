@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.start = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -64,15 +64,15 @@
             this.enable_typing_checkbox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // button1
+            // start
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.start.Location = new System.Drawing.Point(12, 12);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(124, 39);
+            this.start.TabIndex = 0;
+            this.start.Text = "Start";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -131,31 +131,32 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 161);
+            this.textBox1.Location = new System.Drawing.Point(108, 165);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
+            this.textBox1.Size = new System.Drawing.Size(59, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "100";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(199, 161);
+            this.textBox2.Location = new System.Drawing.Point(179, 165);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(63, 20);
             this.textBox2.TabIndex = 7;
             this.textBox2.Text = "2000";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 191);
+            this.textBox3.Location = new System.Drawing.Point(108, 191);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(64, 20);
+            this.textBox3.Size = new System.Drawing.Size(60, 20);
             this.textBox3.TabIndex = 9;
             this.textBox3.Text = "100";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(200, 191);
+            this.textBox4.Location = new System.Drawing.Point(179, 191);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(63, 20);
             this.textBox4.TabIndex = 8;
@@ -215,7 +216,7 @@
             // sound_duration_label8
             // 
             this.sound_duration_label8.AutoSize = true;
-            this.sound_duration_label8.Location = new System.Drawing.Point(15, 257);
+            this.sound_duration_label8.Location = new System.Drawing.Point(18, 261);
             this.sound_duration_label8.Name = "sound_duration_label8";
             this.sound_duration_label8.Size = new System.Drawing.Size(84, 13);
             this.sound_duration_label8.TabIndex = 17;
@@ -223,7 +224,7 @@
             // 
             // sound_duration_textBox5
             // 
-            this.sound_duration_textBox5.Location = new System.Drawing.Point(125, 257);
+            this.sound_duration_textBox5.Location = new System.Drawing.Point(108, 258);
             this.sound_duration_textBox5.Name = "sound_duration_textBox5";
             this.sound_duration_textBox5.Size = new System.Drawing.Size(63, 20);
             this.sound_duration_textBox5.TabIndex = 18;
@@ -232,32 +233,34 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 222);
+            this.label8.Location = new System.Drawing.Point(16, 222);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.Size = new System.Drawing.Size(155, 13);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Play Sounds Every";
+            this.label8.Text = "Change Browser Tabs in every:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // sounds_time_play_value_textBox5
             // 
-            this.sounds_time_play_value_textBox5.Location = new System.Drawing.Point(200, 222);
+            this.sounds_time_play_value_textBox5.Location = new System.Drawing.Point(245, 222);
             this.sounds_time_play_value_textBox5.Name = "sounds_time_play_value_textBox5";
             this.sounds_time_play_value_textBox5.Size = new System.Drawing.Size(63, 20);
             this.sounds_time_play_value_textBox5.TabIndex = 20;
-            this.sounds_time_play_value_textBox5.Text = "10";
+            this.sounds_time_play_value_textBox5.Text = "5";
             // 
             // sounds_time_play_type_comboBox1
             // 
             this.sounds_time_play_type_comboBox1.FormattingEnabled = true;
             this.sounds_time_play_type_comboBox1.Items.AddRange(new object[] {
-            "Hours",
+            "Seconds",
             "Minutes",
-            "Seconds"});
-            this.sounds_time_play_type_comboBox1.Location = new System.Drawing.Point(125, 222);
+            "Hours"});
+            this.sounds_time_play_type_comboBox1.Location = new System.Drawing.Point(174, 222);
             this.sounds_time_play_type_comboBox1.Name = "sounds_time_play_type_comboBox1";
             this.sounds_time_play_type_comboBox1.Size = new System.Drawing.Size(61, 21);
             this.sounds_time_play_type_comboBox1.TabIndex = 21;
-            this.sounds_time_play_type_comboBox1.Text = "Hours";
+            this.sounds_time_play_type_comboBox1.Text = "Minutes";
+            this.sounds_time_play_type_comboBox1.SelectedIndexChanged += new System.EventHandler(this.sounds_time_play_type_comboBox1_SelectedIndexChanged);
             // 
             // keypressed_label
             // 
@@ -341,6 +344,7 @@
             this.enable_click_checkbox1.TabIndex = 30;
             this.enable_click_checkbox1.Text = "Enable Clicking:";
             this.enable_click_checkbox1.UseVisualStyleBackColor = true;
+            this.enable_click_checkbox1.CheckedChanged += new System.EventHandler(this.enable_click_checkbox1_CheckedChanged);
             // 
             // enable_typing_checkbox2
             // 
@@ -352,12 +356,13 @@
             this.enable_typing_checkbox2.TabIndex = 31;
             this.enable_typing_checkbox2.Text = "Enable Typing:";
             this.enable_typing_checkbox2.UseVisualStyleBackColor = true;
+            this.enable_typing_checkbox2.CheckedChanged += new System.EventHandler(this.enable_typing_checkbox2_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 442);
+            this.ClientSize = new System.Drawing.Size(327, 442);
             this.Controls.Add(this.enable_typing_checkbox2);
             this.Controls.Add(this.enable_click_checkbox1);
             this.Controls.Add(this.label15);
@@ -387,7 +392,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.start);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "...";
@@ -399,7 +404,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;

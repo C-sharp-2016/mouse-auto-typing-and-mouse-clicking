@@ -22,22 +22,32 @@ namespace typing_and_clicking
         private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
-         
-        private string  sounds_src = ""; 
+
+        private string sounds_src = "";
+        private string nextScreen = "";
 
         private int s1, s2 = 100, n1, r1, key_typing_counter,mouse_click_counter;
         private int moveFast = 0;
         public event EventHandler Click;
         private string keyPressed;
         private string[] randKey = new string[] {
-             "a","b","c","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+            "{DOWN}", "{UP}", "{LEFT}", "{RIGHT}"
+            // "a","b","c","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
             //,"{BACKSPACE}","{TAB}",
-             "a","b", " ",
+            // "a","b", " ",
              // "{BACKSPACE}", "{BACKSPACE}","{BACKSPACE}","{BACKSPACE}",
              //"{Enter}" ,"{Enter}" ,"{Enter}" 
              //"+(a)", "%{TAB}",,"{Enter}" ,"{Enter}" ,"{Enter}" 
         };
 
+        private string[] changeScreenKeys = new string[] {
+             "^{3}","^{4}","^{8}","^{Tab}" ,"^{2}","^{Tab}","^{5}","^{Tab}","^{Tab}","^{Tab}","^{Tab}",
+            "^{Tab}","^{Tab}","^{1}",
+            "^{Tab}","^{Tab}","^{Tab}","^{Tab}","^{6}","^{Tab}",
+            "^{Tab}","^{7}","^{Tab}","^{Tab}","^{9}"
+        };
+        //private string[] changeScreenKeysUsed = new string[] { 
+        // };
 
         private bool playSoundStatus = true; 
       
@@ -53,6 +63,11 @@ namespace typing_and_clicking
         private int prevHour=0, prevMin=0, prevSec=0; 
 
 
+        /**
+         *  When the apps, clicking....
+         * 
+         * 
+         */
         private void timer2_Tick(object sender, EventArgs e)
         { 
             if (enable_click_checkbox1.Checked == true)
@@ -107,7 +122,7 @@ namespace typing_and_clicking
              
             // typing interval
             textBox1.Text = "100";
-            textBox2.Text = "5000";
+            textBox2.Text = "2000";
 
 
             //clicking interval
@@ -118,7 +133,7 @@ namespace typing_and_clicking
             sound_duration_textBox5.Text = "2000";
              
             ctr_plug_tab_checkbox1.Checked = true;
-            enable_click_checkbox1.Checked = true;
+            //enable_click_checkbox1.Checked = true;
             enable_typing_checkbox2.Checked = true;
              
             // time
@@ -164,7 +179,7 @@ namespace typing_and_clicking
             keypressed_label.Text = "Reset";
              
 
-            button1.Enabled = true;
+            start.Enabled = true;
             button2.Enabled = true;
              
 
@@ -271,7 +286,7 @@ namespace typing_and_clicking
                     {
                         if (hours != 0) {
                             if (prevHour != hours) {
-                                if (button1.Enabled == false)
+                                if (start.Enabled == false)
                                 {
                                     Thread th = new Thread(playSounds);
                                     th.Start();
@@ -297,7 +312,7 @@ namespace typing_and_clicking
                         {
                             if (prevMin != minutes)
                             {
-                                if (button1.Enabled == false)
+                                if (start.Enabled == false)
                                 {
                                     Thread th = new Thread(playSounds);
                                     th.Start();
@@ -323,7 +338,7 @@ namespace typing_and_clicking
                         {
                             if (prevSec != seconds)
                             {
-                                if (button1.Enabled == false) {
+                                if (start.Enabled == false) {
 
                                     Thread th = new Thread(playSounds);
                                     th.Start();
@@ -375,7 +390,22 @@ namespace typing_and_clicking
 
         void send_key_ctr_plus_tab()
         {
-            SendKeys.Send("^{Tab}");
+
+            Random r = new Random();
+
+            n1 = r.Next(0, changeScreenKeys.Length); // select letters
+
+            nextScreen = changeScreenKeys[n1]; 
+
+             
+            //if (changeScreenKeysUsed.Contains(test)) { 
+            
+           // } 
+            
+
+            SendKeys.Send(nextScreen);
+
+            //SendKeys.Send("^{Tab}");
         }
 
 
@@ -391,6 +421,31 @@ namespace typing_and_clicking
         { 
             SoundPlayer sound = new SoundPlayer(@"" + sounds_src + ""); 
             sound.Play();
+        }
+
+        private void sounds_time_play_type_comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enable_typing_checkbox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enable_click_checkbox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 
@@ -416,8 +471,8 @@ namespace typing_and_clicking
            626, 3540, EB
            625, 3500, EB
            622, 3550, EB 
-        */ 
-       private void playSounds()
+        */
+        private void playSounds()
         {
 
 
@@ -428,7 +483,7 @@ namespace typing_and_clicking
            // for(int i=0; i< soundsStr1.Length; i++ )
            // { 
             //only play shouds if auto typing and clicking is activated
-            if(button1.Enabled == false && playSoundStatus == true)
+            if(start.Enabled == false && playSoundStatus == true)
             { 
                  int frequency = Int32.Parse("626");
                  int duration = Int32.Parse(sound_duration_textBox5.Text);
@@ -440,6 +495,12 @@ namespace typing_and_clicking
         } 
 
         private const int MOUSEEVENTF_RIGHTDOWN = 0x0008; 
+        
+        
+        /**
+         * Start button clicked
+         * 
+         */
         private void button1_Click(object sender, EventArgs e)
         { 
             keypressed_label.Text = "Start"; 
@@ -454,12 +515,12 @@ namespace typing_and_clicking
             sounds_time_play_type_comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
             ctr_plug_tab_checkbox1.Enabled = false;  
-            enable_click_checkbox1.Enabled = false;
+             enable_click_checkbox1.Enabled = false;
             enable_typing_checkbox2.Enabled = false;
 
 
 
-            button1.Enabled = false;
+            start.Enabled = false;
             button2.Enabled = true;
         }
 
@@ -494,7 +555,7 @@ namespace typing_and_clicking
             enable_click_checkbox1.Enabled = true;
             enable_typing_checkbox2.Enabled = true;
 
-            button1.Enabled = true;
+            start.Enabled = true;
             button2.Enabled = false;
         }
 
@@ -511,6 +572,7 @@ namespace typing_and_clicking
                 {
 
                     Console.WriteLine("timer 1 ticking");
+
                     int sleepLimit = 1000;
 
                     Random r = new Random();
@@ -605,7 +667,7 @@ namespace typing_and_clicking
             {
                 while (isRunning)
                 {
-                    Thread.Sleep(800);
+                    Thread.Sleep(100);
 
                     if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
@@ -616,13 +678,18 @@ namespace typing_and_clicking
                     {
                         this.Hide();
                     }
-
+                    
                     else if ((Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0)
                     {
                         this.Show();
                     }
 
-                }
+                    else if ((Keyboard.GetKeyStates(Key.G) & KeyStates.Down) > 0)
+                    {
+                        this.PressedStartButton();
+                    }
+
+            }
             }
 
 
@@ -636,47 +703,75 @@ namespace typing_and_clicking
 
 
 
-                Console.WriteLine("Start pressed");
 
 
-                timer1.Start();
-                timer2.Start();
+            keypressed_label.Text = "Start";
+            timer1.Start();
+            timer2.Start();
+            //enable fields for interval
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            sound_duration_textBox5.Enabled = false;
+            sounds_time_play_type_comboBox1.Enabled = false;
+            sounds_time_play_value_textBox5.Enabled = false;
+            ctr_plug_tab_checkbox1.Enabled = false;
+            enable_click_checkbox1.Enabled = false;
+            enable_typing_checkbox2.Enabled = false;
+
+        
+
+            start.Enabled = false;
+            button2.Enabled = true;
+
+            /*
 
 
-                keypressed_label.Text = "Start";
-                
-                
+
+
+        Console.WriteLine("Start pressed");
+
+
+            timer1.Start();
+            timer2.Start();
+
+
+            keypressed_label.Text = "Start";
 
 
 
-                
-                //enable fields for interval
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                textBox3.Enabled = false;
-                textBox4.Enabled = false;
-                sound_duration_textBox5.Enabled = false;
-                sounds_time_play_type_comboBox1.Enabled = false;
-                sounds_time_play_value_textBox5.Enabled = false;
-                ctr_plug_tab_checkbox1.Enabled = false;
-                enable_click_checkbox1.Enabled = false;
-                enable_typing_checkbox2.Enabled = false;
-
-            button1.Enabled = false;
-                button2.Enabled = true;
 
 
-                Console.WriteLine(keypressed_label.Text);
 
-            }
+            //enable fields for interval
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            sound_duration_textBox5.Enabled = false;
+            sounds_time_play_type_comboBox1.Enabled = false;
+            sounds_time_play_value_textBox5.Enabled = false;
+            ctr_plug_tab_checkbox1.Enabled = false;
+           // enable_click_checkbox1.Enabled = false;
+            enable_typing_checkbox2.Enabled = false;
 
-            //// this is the copy of start button click 
-             void PressedStopButton()
+        start.Enabled = false;
+            button2.Enabled = true;
+
+
+            Console.WriteLine(keypressed_label.Text);
+
+        */
+
+        }
+
+        //// this is the copy of start button click 
+        /// this is triggered when hold [esc] key
+        void PressedStopButton()
             {
                 keypressed_label.Text = "Stop";
-
-
-
+              
 
                 timer1.Stop();
                 timer2.Stop();
@@ -695,10 +790,9 @@ namespace typing_and_clicking
                 enable_typing_checkbox2.Enabled = true;
 
 
-            button1.Enabled = true;
+            start.Enabled = true;
                 button2.Enabled = false;
-                Console.WriteLine(keypressed_label.Text);
-
+                Console.WriteLine(keypressed_label.Text); 
             }
 
             //// this is the copy of start button click 
@@ -707,7 +801,7 @@ namespace typing_and_clicking
 
                 keypressed_label.Text = "Reset";
 
-                button1.Enabled = true;
+                start.Enabled = true;
                 button2.Enabled = true;
 
                 mouse_click_counter = 0;
@@ -738,7 +832,7 @@ namespace typing_and_clicking
                 sounds_time_play_type_comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
                 ctr_plug_tab_checkbox1.Enabled = true;
-                enable_click_checkbox1.Enabled = true;
+               // enable_click_checkbox1.Enabled = true;
                 enable_typing_checkbox2.Enabled = true; 
                 timer1.Stop();
                 timer2.Stop();
