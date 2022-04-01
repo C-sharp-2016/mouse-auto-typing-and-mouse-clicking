@@ -25,12 +25,13 @@ E:\my project\c#\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\De
 E:\my project\c#\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Properties.Resources.resources
 E:\my project\c#\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.GenerateResource.Cache
 E:\my project\c#\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csprojResolveAssemblyReference.cache
-C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.exe.config
-C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.exe
-C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.pdb
+C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.exe
 C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Form1.resources
 C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Properties.Resources.resources
 C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.GenerateResource.cache
 C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.CoreCompileInputs.cache
-C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.exe
+C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.exe.config
+C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.exe
+C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\typing_and_clicking.pdb
 C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.pdb
+C:\laragon\www\c-sharp-project\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csprojAssemblyReference.cache

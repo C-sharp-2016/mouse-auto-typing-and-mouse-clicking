@@ -16,15 +16,20 @@ using System.Windows.Input;
 namespace typing_and_clicking
 {
     public partial class Form1 : Form
-    { 
+    {
 
-
+        // src: keys send - http://go-gaga-over-testing.blogspot.com/2011/01/sendkeys-cheat-sheet.html   
         private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
         private int seconds = 0, minutes = 0, hours = 0;
         private string seconds_zero, minutes_zero, hours_zero;
 
         private string sounds_src = "";
         private string nextScreen = "";
+
+        private string nextTabPhpstorm = "%{RIGHT}";  // tab + arrow-right 
+        private string nextTabVsSublimeBrowser = "^+{Tab}"; // ctr + shift + tab
+        //private string nextScreen = "";
+        //private string nextTab = "^+{Tab}"; 
 
         private int s1, s2 = 100, n1, r1, key_typing_counter,mouse_click_counter;
         private int moveFast = 0;
@@ -41,10 +46,11 @@ namespace typing_and_clicking
         };
 
         private string[] changeScreenKeys = new string[] {
-             "^{3}","^{4}","^{8}","^{Tab}" ,"^{2}","^{Tab}","^{5}","^{Tab}","^{Tab}","^{Tab}","^{Tab}",
-            "^{Tab}","^{Tab}","^{1}",
-            "^{Tab}","^{Tab}","^{Tab}","^{Tab}","^{6}","^{Tab}",
-            "^{Tab}","^{7}","^{Tab}","^{Tab}","^{9}"
+            "^{Tab}"
+             //"^{3}","^{4}","^{8}","^{Tab}" ,"^{2}","^{Tab}","^{5}","^{Tab}","^{Tab}","^{Tab}","^{Tab}",
+            //"^{Tab}","^{Tab}","^{1}",
+           // "^{Tab}","^{Tab}","^{Tab}","^{Tab}","^{6}","^{Tab}",
+            //"^{Tab}","^{7}","^{Tab}","^{Tab}","^{9}"
         };
         //private string[] changeScreenKeysUsed = new string[] { 
         // };
@@ -127,7 +133,7 @@ namespace typing_and_clicking
 
             //clicking interval
             textBox3.Text = "100";
-            textBox4.Text = "7000";
+            textBox4.Text = "5000";
 
 
             sound_duration_textBox5.Text = "2000";
@@ -194,7 +200,7 @@ namespace typing_and_clicking
 
             //clicking interval
             textBox3.Text = "100";
-            textBox4.Text = "7000";
+            textBox4.Text = "5000";
 
             // typing times
             label1.Text = "0";
@@ -210,6 +216,7 @@ namespace typing_and_clicking
             textBox4.Enabled = true;
             sound_duration_textBox5.Enabled = true; 
             sounds_time_play_type_comboBox1.Enabled = true;
+            comboBox1.Enabled = true;
             sounds_time_play_value_textBox5.Enabled = true;
             enable_click_checkbox1.Enabled = true;
             enable_typing_checkbox2.Enabled = true; 
@@ -386,30 +393,41 @@ namespace typing_and_clicking
             log_click_total = 0;
             log_typing_total = 0;
         }
-
-
+         
         void send_key_ctr_plus_tab()
         {
-
-            Random r = new Random();
-
-            n1 = r.Next(0, changeScreenKeys.Length); // select letters
-
-            nextScreen = changeScreenKeys[n1]; 
-
-             
+            // Random r = new Random();
+            // n1 = r.Next(0, changeScreenKeys.Length); // select letters
+            // nextScreen = changeScreenKeys[n1];
             //if (changeScreenKeysUsed.Contains(test)) { 
-            
-           // } 
-            
+            // }
+            //Console.log(" change screen " + nextScreen);
 
-            SendKeys.Send(nextScreen);
 
-            //SendKeys.Send("^{Tab}");
+            // sublime,browser,vs-code
+            //SendKeys.Send(nextTab);
+
+
+            // Console.WriteLine(" box " + tab_type_combobox.Text); 
+            //Console.WriteLine(" box " + tab_type_combobox.Text); 
+
+            //label10.Text =
+            // label13.Text = comboBox1.Text; 
+
+            if (comboBox1.Text == "Phpstorm")
+            {
+                 // SendKeys.Send("^{Tab}"); 
+                 SendKeys.Send(nextTabPhpstorm); 
+            }
+            else
+            {
+                // phpstorm
+                SendKeys.Send(nextTabVsSublimeBrowser);
+             
+                    
+            }
+
         }
-
-
-
 
         /**
         * src: http://www.soundjay.com/typewriter-sounds.html
@@ -444,6 +462,26 @@ namespace typing_and_clicking
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -513,6 +551,7 @@ namespace typing_and_clicking
             textBox4.Enabled = false;
             sound_duration_textBox5.Enabled = false;
             sounds_time_play_type_comboBox1.Enabled = false;
+            comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
             ctr_plug_tab_checkbox1.Enabled = false;  
              enable_click_checkbox1.Enabled = false;
@@ -550,6 +589,7 @@ namespace typing_and_clicking
             textBox4.Enabled = true;
             sound_duration_textBox5.Enabled = true; 
             sounds_time_play_type_comboBox1.Enabled = true;
+            comboBox1.Enabled = true;
             sounds_time_play_value_textBox5.Enabled = true;
             ctr_plug_tab_checkbox1.Enabled = true;
             enable_click_checkbox1.Enabled = true;
@@ -689,7 +729,7 @@ namespace typing_and_clicking
                         this.PressedStartButton();
                     }
 
-            }
+                }
             }
 
 
@@ -715,6 +755,7 @@ namespace typing_and_clicking
             textBox4.Enabled = false;
             sound_duration_textBox5.Enabled = false;
             sounds_time_play_type_comboBox1.Enabled = false;
+            comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
             ctr_plug_tab_checkbox1.Enabled = false;
             enable_click_checkbox1.Enabled = false;
@@ -751,6 +792,7 @@ namespace typing_and_clicking
             textBox4.Enabled = false;
             sound_duration_textBox5.Enabled = false;
             sounds_time_play_type_comboBox1.Enabled = false;
+            comboBox1.Enabled = false;
             sounds_time_play_value_textBox5.Enabled = false;
             ctr_plug_tab_checkbox1.Enabled = false;
            // enable_click_checkbox1.Enabled = false;
@@ -784,6 +826,7 @@ namespace typing_and_clicking
                 textBox4.Enabled = true;
                 sound_duration_textBox5.Enabled = true;
                 sounds_time_play_type_comboBox1.Enabled = true;
+                comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
                 ctr_plug_tab_checkbox1.Enabled = true;
                 enable_click_checkbox1.Enabled = true;
@@ -830,6 +873,7 @@ namespace typing_and_clicking
                 textBox4.Enabled = true;
                 sound_duration_textBox5.Enabled = true;  
                 sounds_time_play_type_comboBox1.Enabled = true;
+                comboBox1.Enabled = true;
                 sounds_time_play_value_textBox5.Enabled = true;
                 ctr_plug_tab_checkbox1.Enabled = true;
                // enable_click_checkbox1.Enabled = true;

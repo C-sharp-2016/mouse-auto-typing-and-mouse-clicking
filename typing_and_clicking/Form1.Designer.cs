@@ -62,6 +62,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.enable_click_checkbox1 = new System.Windows.Forms.CheckBox();
             this.enable_typing_checkbox2 = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // start
@@ -161,6 +164,7 @@
             this.textBox4.Size = new System.Drawing.Size(63, 20);
             this.textBox4.TabIndex = 8;
             this.textBox4.Text = "3000";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -216,7 +220,7 @@
             // sound_duration_label8
             // 
             this.sound_duration_label8.AutoSize = true;
-            this.sound_duration_label8.Location = new System.Drawing.Point(18, 261);
+            this.sound_duration_label8.Location = new System.Drawing.Point(18, 319);
             this.sound_duration_label8.Name = "sound_duration_label8";
             this.sound_duration_label8.Size = new System.Drawing.Size(84, 13);
             this.sound_duration_label8.TabIndex = 17;
@@ -224,7 +228,7 @@
             // 
             // sound_duration_textBox5
             // 
-            this.sound_duration_textBox5.Location = new System.Drawing.Point(108, 258);
+            this.sound_duration_textBox5.Location = new System.Drawing.Point(108, 316);
             this.sound_duration_textBox5.Name = "sound_duration_textBox5";
             this.sound_duration_textBox5.Size = new System.Drawing.Size(63, 20);
             this.sound_duration_textBox5.TabIndex = 18;
@@ -233,20 +237,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 222);
+            this.label8.Location = new System.Drawing.Point(17, 227);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 13);
+            this.label8.Size = new System.Drawing.Size(200, 13);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Change Browser Tabs in every:";
+            this.label8.Text = "Change Tabs for Browser or Code Editor:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // sounds_time_play_value_textBox5
             // 
-            this.sounds_time_play_value_textBox5.Location = new System.Drawing.Point(245, 222);
+            this.sounds_time_play_value_textBox5.Location = new System.Drawing.Point(122, 249);
             this.sounds_time_play_value_textBox5.Name = "sounds_time_play_value_textBox5";
-            this.sounds_time_play_value_textBox5.Size = new System.Drawing.Size(63, 20);
+            this.sounds_time_play_value_textBox5.Size = new System.Drawing.Size(85, 20);
             this.sounds_time_play_value_textBox5.TabIndex = 20;
-            this.sounds_time_play_value_textBox5.Text = "5";
+            this.sounds_time_play_value_textBox5.Text = "3";
             // 
             // sounds_time_play_type_comboBox1
             // 
@@ -255,9 +259,9 @@
             "Seconds",
             "Minutes",
             "Hours"});
-            this.sounds_time_play_type_comboBox1.Location = new System.Drawing.Point(174, 222);
+            this.sounds_time_play_type_comboBox1.Location = new System.Drawing.Point(19, 249);
             this.sounds_time_play_type_comboBox1.Name = "sounds_time_play_type_comboBox1";
-            this.sounds_time_play_type_comboBox1.Size = new System.Drawing.Size(61, 21);
+            this.sounds_time_play_type_comboBox1.Size = new System.Drawing.Size(95, 21);
             this.sounds_time_play_type_comboBox1.TabIndex = 21;
             this.sounds_time_play_type_comboBox1.Text = "Minutes";
             this.sounds_time_play_type_comboBox1.SelectedIndexChanged += new System.EventHandler(this.sounds_time_play_type_comboBox1_SelectedIndexChanged);
@@ -274,7 +278,7 @@
             // ctr_plug_tab_checkbox1
             // 
             this.ctr_plug_tab_checkbox1.AutoSize = true;
-            this.ctr_plug_tab_checkbox1.Location = new System.Drawing.Point(125, 331);
+            this.ctr_plug_tab_checkbox1.Location = new System.Drawing.Point(125, 389);
             this.ctr_plug_tab_checkbox1.Name = "ctr_plug_tab_checkbox1";
             this.ctr_plug_tab_checkbox1.Size = new System.Drawing.Size(15, 14);
             this.ctr_plug_tab_checkbox1.TabIndex = 23;
@@ -283,7 +287,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 328);
+            this.label9.Location = new System.Drawing.Point(14, 386);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 13);
             this.label9.TabIndex = 24;
@@ -301,7 +305,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 383);
+            this.label12.Location = new System.Drawing.Point(15, 436);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(139, 13);
             this.label12.TabIndex = 26;
@@ -310,7 +314,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 423);
+            this.label13.Location = new System.Drawing.Point(14, 476);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 13);
             this.label13.TabIndex = 27;
@@ -319,7 +323,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 403);
+            this.label14.Location = new System.Drawing.Point(14, 456);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 13);
             this.label14.TabIndex = 28;
@@ -328,7 +332,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(16, 360);
+            this.label15.Location = new System.Drawing.Point(13, 410);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(219, 13);
             this.label15.TabIndex = 29;
@@ -338,7 +342,7 @@
             // 
             this.enable_click_checkbox1.AutoSize = true;
             this.enable_click_checkbox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.enable_click_checkbox1.Location = new System.Drawing.Point(36, 284);
+            this.enable_click_checkbox1.Location = new System.Drawing.Point(36, 342);
             this.enable_click_checkbox1.Name = "enable_click_checkbox1";
             this.enable_click_checkbox1.Size = new System.Drawing.Size(102, 17);
             this.enable_click_checkbox1.TabIndex = 30;
@@ -350,7 +354,7 @@
             // 
             this.enable_typing_checkbox2.AutoSize = true;
             this.enable_typing_checkbox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.enable_typing_checkbox2.Location = new System.Drawing.Point(41, 307);
+            this.enable_typing_checkbox2.Location = new System.Drawing.Point(41, 365);
             this.enable_typing_checkbox2.Name = "enable_typing_checkbox2";
             this.enable_typing_checkbox2.Size = new System.Drawing.Size(97, 17);
             this.enable_typing_checkbox2.TabIndex = 31;
@@ -358,11 +362,45 @@
             this.enable_typing_checkbox2.UseVisualStyleBackColor = true;
             this.enable_typing_checkbox2.CheckedChanged += new System.EventHandler(this.enable_typing_checkbox2_CheckedChanged);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 300);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(247, 13);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "--------------------------------------------------------------------------------";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(16, 214);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(247, 13);
+            this.label18.TabIndex = 38;
+            this.label18.Text = "--------------------------------------------------------------------------------";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "VS,SublimeText,Browser",
+            "Phpstorm"});
+            this.comboBox1.Location = new System.Drawing.Point(18, 275);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 21);
+            this.comboBox1.TabIndex = 39;
+            this.comboBox1.Text = "VS,SublimeText,Browser";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 442);
+            this.ClientSize = new System.Drawing.Size(275, 502);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.enable_typing_checkbox2);
             this.Controls.Add(this.enable_click_checkbox1);
             this.Controls.Add(this.label15);
@@ -437,6 +475,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox enable_click_checkbox1;
         private System.Windows.Forms.CheckBox enable_typing_checkbox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
