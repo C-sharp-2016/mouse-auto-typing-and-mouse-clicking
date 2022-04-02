@@ -18,6 +18,10 @@ namespace typing_and_clicking
     public partial class Form1 : Form
     {
 
+
+        //public static LocalDataStoreSlot dataslot = Thread.AllocateDataSlot();
+
+
         // src: keys send - http://go-gaga-over-testing.blogspot.com/2011/01/sendkeys-cheat-sheet.html   
         private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
         private int seconds = 0, minutes = 0, hours = 0;
@@ -182,6 +186,9 @@ namespace typing_and_clicking
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+           Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
+
             keypressed_label.Text = "Reset";
              
 
@@ -486,6 +493,20 @@ namespace typing_and_clicking
 
         }
 
+        private void label16_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Login myLogin = new Login();
+
+            myLogin.Show();
+        }
+
 
 
 
@@ -719,7 +740,7 @@ namespace typing_and_clicking
                         this.Hide();
                     }
                     
-                    else if ((Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.F1) & KeyStates.Down) > 0)
                     {
                         this.Show();
                     }
