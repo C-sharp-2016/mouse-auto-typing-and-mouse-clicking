@@ -30,18 +30,20 @@ namespace typing_and_clicking
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.forgot_password_link = new System.Windows.Forms.LinkLabel();
+            this.label_login_wait = new System.Windows.Forms.Label();
+            this.label_failed_login = new System.Windows.Forms.Label();
             this.login_btn = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_failed_login = new System.Windows.Forms.Label();
-            this.label_login_wait = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.forgot_password_link);
             this.groupBox1.Controls.Add(this.label_login_wait);
             this.groupBox1.Controls.Add(this.label_failed_login);
             this.groupBox1.Controls.Add(this.login_btn);
@@ -56,6 +58,39 @@ namespace typing_and_clicking
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Welcome To APP-Z";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // forgot_password_link
+            // 
+            this.forgot_password_link.AutoSize = true;
+            this.forgot_password_link.ForeColor = System.Drawing.Color.DarkCyan;
+            this.forgot_password_link.Location = new System.Drawing.Point(16, 233);
+            this.forgot_password_link.Name = "forgot_password_link";
+            this.forgot_password_link.Size = new System.Drawing.Size(86, 13);
+            this.forgot_password_link.TabIndex = 10;
+            this.forgot_password_link.TabStop = true;
+            this.forgot_password_link.Text = "Forgot Password";
+            this.forgot_password_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgot_password_link_LinkClicked);
+            // 
+            // label_login_wait
+            // 
+            this.label_login_wait.AutoSize = true;
+            this.label_login_wait.Location = new System.Drawing.Point(100, 213);
+            this.label_login_wait.Name = "label_login_wait";
+            this.label_login_wait.Size = new System.Drawing.Size(73, 13);
+            this.label_login_wait.TabIndex = 9;
+            this.label_login_wait.Text = "Please wait....";
+            // 
+            // label_failed_login
+            // 
+            this.label_failed_login.AutoSize = true;
+            this.label_failed_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_failed_login.ForeColor = System.Drawing.Color.Red;
+            this.label_failed_login.Location = new System.Drawing.Point(16, 212);
+            this.label_failed_login.Name = "label_failed_login";
+            this.label_failed_login.Size = new System.Drawing.Size(35, 13);
+            this.label_failed_login.TabIndex = 8;
+            this.label_failed_login.Text = "Error..";
+            this.label_failed_login.Click += new System.EventHandler(this.label_failed_login_Click);
             // 
             // login_btn
             // 
@@ -102,27 +137,6 @@ namespace typing_and_clicking
             this.label1.TabIndex = 3;
             this.label1.Text = "Username:";
             // 
-            // label_failed_login
-            // 
-            this.label_failed_login.AutoSize = true;
-            this.label_failed_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_failed_login.ForeColor = System.Drawing.Color.Red;
-            this.label_failed_login.Location = new System.Drawing.Point(16, 215);
-            this.label_failed_login.Name = "label_failed_login";
-            this.label_failed_login.Size = new System.Drawing.Size(35, 13);
-            this.label_failed_login.TabIndex = 8;
-            this.label_failed_login.Text = "Error..";
-            this.label_failed_login.Click += new System.EventHandler(this.label_failed_login_Click);
-            // 
-            // label_login_wait
-            // 
-            this.label_login_wait.AutoSize = true;
-            this.label_login_wait.Location = new System.Drawing.Point(100, 215);
-            this.label_login_wait.Name = "label_login_wait";
-            this.label_login_wait.Size = new System.Drawing.Size(73, 13);
-            this.label_login_wait.TabIndex = 9;
-            this.label_login_wait.Text = "Please wait....";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,5 +161,6 @@ namespace typing_and_clicking
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label label_failed_login;
         private System.Windows.Forms.Label label_login_wait;
+        private System.Windows.Forms.LinkLabel forgot_password_link;
     }
 }

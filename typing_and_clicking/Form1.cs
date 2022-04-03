@@ -148,8 +148,7 @@ namespace typing_and_clicking
              
             // time
             timer3.Start();
-
-
+             
 
             //// Initialized 
             /// thread for keypressed detect  
@@ -182,12 +181,18 @@ namespace typing_and_clicking
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        } 
+        public void loginStatus()
+        {
+           //  Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
+            Console.WriteLine("finalizer thread ID: {0}", Program.UserID);
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
 
-           Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
+            this.loginStatus();
+
+            // Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
 
             keypressed_label.Text = "Reset";
              
@@ -500,11 +505,28 @@ namespace typing_and_clicking
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
 
-            Login myLogin = new Login();
+            //if ((string)Thread.GetData(Program.dataslot) == "loggedin")
 
-            myLogin.Show();
+
+            Authentication Auth = new Authentication();
+            Auth.logout();
+             
+
+            if (Program.UserID  == "loggedin")
+            { 
+                // Thread.SetData(Program.dataslot, "");
+
+                this.Hide();
+
+                Login myLogin = new Login();
+
+                myLogin.Show();
+
+
+                Program.UserID = "";
+
+            }
         }
 
 
@@ -715,7 +737,7 @@ namespace typing_and_clicking
             private int pressed = 0;
 
 
-            private void startKeyPressDetectThread()
+            public void startKeyPressDetectThread()
             {
                 Thread TH = new Thread(Keyboardd11);
                 TH.SetApartmentState(ApartmentState.STA);
@@ -724,7 +746,7 @@ namespace typing_and_clicking
             }
 
 
-            void Keyboardd11()
+            public void Keyboardd11()
             {
                 while (isRunning)
                 {
@@ -737,12 +759,27 @@ namespace typing_and_clicking
                      
                     else if ((Keyboard.GetKeyStates(Key.H) & KeyStates.Down) > 0)
                     {
-                        this.Hide();
+                        //this.Hide();
                     }
                     
-                    else if ((Keyboard.GetKeyStates(Key.F1) & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.F2) & KeyStates.Down) > 0)
                     {
-                        this.Show();
+
+                    //Form1 myForm1 = new Form1();
+                        //this.loginStatus();
+
+                    // Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
+
+                    //if ((string)Thread.GetData(Program.dataslot) == "loggedin") {  
+                    if (Program.UserID  == "loggedin") {  
+
+                          
+                        Console.WriteLine("This is about to show...");
+
+                        //Form1 myForm1 = new Form1();
+
+                            this.Show();
+                        }
                     }
 
                     else if ((Keyboard.GetKeyStates(Key.G) & KeyStates.Down) > 0)

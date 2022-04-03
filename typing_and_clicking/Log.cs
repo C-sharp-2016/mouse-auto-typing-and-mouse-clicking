@@ -9,13 +9,10 @@ using System.IO;
 namespace typing_and_clicking
 {
     class Log
-    {
-         
+    { 
         public void addText(string msg)
         {
-            try {
-
-
+            try {  
                 using (StreamWriter w = File.AppendText("log/log.txt"))
                 {
                     logMessage(msg, w);

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
+using System.Threading; 
+using System.IO;
+using System.IO.IsolatedStorage;
 
 namespace typing_and_clicking
 {
     static class Program
     {
 
+        public static string UserID;
         public static LocalDataStoreSlot dataslot = Thread.AllocateDataSlot();
         /// <summary>
         /// The main entry point for the application.
@@ -17,10 +20,53 @@ namespace typing_and_clicking
         [STAThread]
         static void Main()
         {
+
+
+
+            using (IsolatedStorageFile isoStore = IsolatedStorageFile.GetStore(IsolatedStorageScope.User | IsolatedStorageScope.Domain | IsolatedStorageScope.Assembly, null, null))
+            {
+               //  isoStore.CreateDirectory("TestDirectory");
+               // isoStore.CreateDirectory("TopLevelDirectory/SecondLevel");
+                //isoStore.CreateDirectory("AnotherTopLevelDirectory/InsideDirectory");
+                //onsole.WriteLine("Created directories.");
+
+                //isoStore.CreateFile("InTheRoot.txt");
+                //Console.WriteLine("Created a new file in the root.");
+
+                //isoStore.CreateFile("AnotherTopLevelDirectory/InsideDirectory/HereIAm.txt");
+                //Console.WriteLine("Created a new file in the InsideDirectory."); 
+            }
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
-            //Application.Run(new Form1());
+
+            Authentication Auth = new Authentication();
+           
+            if (Auth.getLoggedin() == "200")
+            {
+                UserID = "loggedin";
+            }
+
+
+            if(UserID == "loggedin") 
+            {
+                Application.Run(new Form1());
+             } 
+            else
+            {
+                Application.Run(new Login());
+              
+             }
+
+
+
         }
+
+
+
+
+
+
     }
 }
