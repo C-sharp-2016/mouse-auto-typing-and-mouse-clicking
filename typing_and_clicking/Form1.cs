@@ -750,19 +750,19 @@ namespace typing_and_clicking
             {
                 while (isRunning)
                 {
-                    Thread.Sleep(100);
+                    Thread.Sleep(50);
 
                     if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
                         PressedStopButton();
                     }
                      
-                    else if ((Keyboard.GetKeyStates(Key.H) & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.H) & (Keyboard.GetKeyStates(Key.LeftCtrl))  & KeyStates.Down) > 0)
                     {
-                        //this.Hide();
+                        this.Hide();
                     }
                     
-                    else if ((Keyboard.GetKeyStates(Key.F2) & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.S) & (Keyboard.GetKeyStates(Key.LeftCtrl)) & KeyStates.Down) > 0)
                     {
 
                     //Form1 myForm1 = new Form1();

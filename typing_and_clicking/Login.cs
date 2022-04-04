@@ -22,7 +22,6 @@ namespace typing_and_clicking
 
         public Login()
         {
-
             /*
             HttpContext context = HttpContext.Current;
             context.Session["FirstName"] = firstName;
@@ -33,8 +32,11 @@ namespace typing_and_clicking
             label_failed_login.Text = "";
             label_login_wait.Text = "";
 
-            username.Text = "mrjesuserwinsuarez@gmail.com";
-            password.Text = "password";
+            //username.Text = "mrjesuserwinsuarez@gmail.com";
+            //password.Text = "password";
+
+            //username.Text = "jesus@gmail.com";
+            //password.Text = "password";
         } 
         private void groupBox1_Enter(object sender, EventArgs e)
         { 
@@ -53,27 +55,22 @@ namespace typing_and_clicking
         } 
         private void setLogin ()
         {
-
             label_login_wait.Text = "Please wait..";
             label_failed_login.Text = "";
 
-
             HttpClient client = new HttpClient();
-             // client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
+            // client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
             client.BaseAddress = new Uri("https://easimpt.com/api/");
-            HttpResponseMessage response = client.GetAsync("test/login?password=" + password.Text + "&email="+username.Text).Result;
-             loginStatus = response.Content.ReadAsStringAsync().Result;
+            HttpResponseMessage response = client.GetAsync("authenticate/login?password=" + password.Text + "&email="+username.Text).Result;
+            loginStatus = response.Content.ReadAsStringAsync().Result;
              
             Console.WriteLine(loginStatus);
 
-
-             
-            /*
+           /*
            if (contents.response)
            {
                Console.WriteLine(" response " + contents.response.message);
            }
-
 
            var client = new RestClient("http://localhost:3000/Api/GetCustomerDetailsByCustomerId/" + id);
            var request = new RestRequest(Method.GET);
@@ -90,7 +87,7 @@ namespace typing_and_clicking
             //Console.WriteLine("username" + username.Text);
             //Console.WriteLine("password" + password.Text);
              
-            if(loginStatus == "200")
+            if(loginStatus != string.Empty)
            // if (password.Text == "test" && username.Text == "test")
             {
                 // Thread.SetData(Program.dataslot, "loggedin");
@@ -98,7 +95,7 @@ namespace typing_and_clicking
                 Authentication Auth = new Authentication();
                 Auth.login(loginStatus);
 
-                if (Auth.getLoggedin() == "200")
+                if (Auth.getLoggedin() != string.Empty)
                 {
                     Program.UserID = "loggedin"; 
                 }
@@ -118,31 +115,17 @@ namespace typing_and_clicking
 
                     label_login_wait.Text = "";
                      
-                    Authentication auth = new Authentication();
-
-                   // auth.logout();
-
-                    
-                    // Console.WriteLine("Current Loggedin = " + auth.getLoggedin());
-
-
-
-
-
+                    Authentication auth = new Authentication();   
                 }
             }
             else
             {
                 Console.WriteLine("Invalid Credintials");
 
-
                 label_failed_login.Text = "Invalid Credintials, please reset your password.";
                 label_login_wait.Text = "";
             }
 
-             
-            //string ID = (string)Thread.GetData(dataslot);
-            //Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
             Console.WriteLine("finalizer thread ID: {0}", Program.UserID);
         }
 
@@ -155,24 +138,5 @@ namespace typing_and_clicking
         { 
             System.Diagnostics.Process.Start("https://easimpt.com/password/reset");
         }
-
-
-        /*
-        async Task<string> GetResponseString(string text)
-        {
-            var httpClient = new HttpClient();
-
-            var parameters = new Dictionary<string, string>();
-            parameters["text"] = text;
-
-            var response = await httpClient.PostAsync(BaseUri, new FormUrlEncodedContent(parameters));
-            var contents = await response.Content.ReadAsStringAsync();
-
-            return contents;
-        } */
     }
-
-
-
-
 }

@@ -319,18 +319,18 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(23, 520);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 13);
+            this.label13.Size = new System.Drawing.Size(130, 13);
             this.label13.TabIndex = 27;
-            this.label13.Text = "S - show application";
+            this.label13.Text = "Ctr + S - Show Application";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(23, 500);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 13);
+            this.label14.Size = new System.Drawing.Size(126, 13);
             this.label14.TabIndex = 28;
-            this.label14.Text = "H - hide application";
+            this.label14.Text = "Ctr + H - Hide Application";
             // 
             // label15
             // 

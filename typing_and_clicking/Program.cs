@@ -43,7 +43,7 @@ namespace typing_and_clicking
 
             Authentication Auth = new Authentication();
            
-            if (Auth.getLoggedin() == "200")
+            if (Auth.getLoggedin() != string.Empty)
             {
                 UserID = "loggedin";
             }
