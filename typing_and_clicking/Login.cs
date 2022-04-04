@@ -36,7 +36,7 @@ namespace typing_and_clicking
             //password.Text = "password";
 
             //username.Text = "jesus@gmail.com";
-            //password.Text = "password";
+           // password.Text = "password";
         } 
         private void groupBox1_Enter(object sender, EventArgs e)
         { 
@@ -59,7 +59,7 @@ namespace typing_and_clicking
             label_failed_login.Text = "";
 
             HttpClient client = new HttpClient();
-            // client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
+            //   client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
             client.BaseAddress = new Uri("https://easimpt.com/api/");
             HttpResponseMessage response = client.GetAsync("authenticate/login?password=" + password.Text + "&email="+username.Text).Result;
             loginStatus = response.Content.ReadAsStringAsync().Result;
@@ -87,7 +87,7 @@ namespace typing_and_clicking
             //Console.WriteLine("username" + username.Text);
             //Console.WriteLine("password" + password.Text);
              
-            if(loginStatus != string.Empty)
+            if(loginStatus != string.Empty && loginStatus != "422")
            // if (password.Text == "test" && username.Text == "test")
             {
                 // Thread.SetData(Program.dataslot, "loggedin");

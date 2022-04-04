@@ -750,7 +750,7 @@ namespace typing_and_clicking
             {
                 while (isRunning)
                 {
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
 
                     if ((Keyboard.GetKeyStates(Key.Escape) & KeyStates.Down) > 0)
                     {
@@ -759,29 +759,17 @@ namespace typing_and_clicking
                      
                     else if ((Keyboard.GetKeyStates(Key.H) & (Keyboard.GetKeyStates(Key.LeftCtrl))  & KeyStates.Down) > 0)
                     {
+                        Console.WriteLine("You've triggered to hide the application...");
                         this.Hide();
                     }
                     
                     else if ((Keyboard.GetKeyStates(Key.S) & (Keyboard.GetKeyStates(Key.LeftCtrl)) & KeyStates.Down) > 0)
-                    {
-
-                    //Form1 myForm1 = new Form1();
-                        //this.loginStatus();
-
-                    // Console.WriteLine("finalizer thread ID: {0}", (string)Thread.GetData(Program.dataslot));
-
-                    //if ((string)Thread.GetData(Program.dataslot) == "loggedin") {  
-                    if (Program.UserID  == "loggedin") {  
-
-                          
-                        Console.WriteLine("This is about to show...");
-
-                        //Form1 myForm1 = new Form1();
-
+                    { 
+                        if (Program.UserID  == "loggedin") {   
+                            Console.WriteLine("You've triggered to show the application..."); 
                             this.Show();
                         }
-                    }
-
+                    } 
                     else if ((Keyboard.GetKeyStates(Key.G) & KeyStates.Down) > 0)
                     {
                         this.PressedStartButton();
