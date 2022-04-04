@@ -240,6 +240,8 @@ namespace typing_and_clicking
 
         }
 
+
+        // change tab
         private void timer3_Tick(object sender, EventArgs e)
         {
 
@@ -642,6 +644,7 @@ namespace typing_and_clicking
             button2.Enabled = false;
         }
 
+        // app is typing
         private void timer1_Tick(object sender, EventArgs e)
         {
             // change speed of the time 
@@ -652,16 +655,14 @@ namespace typing_and_clicking
             if (enable_typing_checkbox2.Checked == true)
             { 
                 try
-                {
-
+                { 
                     Console.WriteLine("timer 1 ticking");
-
-                    int sleepLimit = 1000;
-
+                     
                     Random r = new Random();
                     n1 = r.Next(0, randKey.Length); // select letters
-
-
+                     
+                    int sleepLimit = 1000; // r.Next(0, randKey.Length);;
+                      
                     //move fast 5 times only
                     if (s2 < 500 && moveFast == 0)
                     {
@@ -694,12 +695,12 @@ namespace typing_and_clicking
                     label1.Text = key_typing_counter.ToString();
 
 
-                    Console.WriteLine("Typing Pause " + s2);
+                    Console.WriteLine("Typing Pause: " + s2);
 
 
 
                     // form title changing while app is running
-                    string str = "..........";
+                    string str = "........";
                     this.Text = str.Substring(0, r.Next(1, str.Length));
 
 
