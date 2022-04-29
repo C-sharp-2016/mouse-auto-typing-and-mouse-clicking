@@ -529,11 +529,15 @@ namespace typing_and_clicking
                 Program.UserID = "";
 
             }
+        }  
+        private void btn_close_Click(object sender, EventArgs e)
+        { 
+            System.Windows.Forms.Application.ExitThread();
+             
+            System.Windows.Forms.Application.Exit();
+
+            System.Environment.Exit(0);
         }
-
-
-
-
 
 
 

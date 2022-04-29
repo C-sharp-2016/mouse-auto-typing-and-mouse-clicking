@@ -56,6 +56,11 @@ namespace typing_and_clicking
             {
                 Application.Run(new Login());
             } 
-        } 
+        }
+
+         
+
+
+
     }
 }
