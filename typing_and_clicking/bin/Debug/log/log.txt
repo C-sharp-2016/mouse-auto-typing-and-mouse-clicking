@@ -2327,3 +2327,241 @@ Log Entry : 10:38:58 PM Monday, April 4, 2022
 : Error handling typing message: Value '0' is not a valid value for Interval. Interval must be greater than 0.
 Parameter name: Interval
 ----------------------------------------------------------------------------------
+Log Entry : 1:31:49 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 9
+----------------------------------------------------------------------------------
+Log Entry : 1:31:54 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 4
+----------------------------------------------------------------------------------
+Log Entry : 1:31:59 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 12
+----------------------------------------------------------------------------------
+Log Entry : 1:32:14 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 1:32:19 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 6
+----------------------------------------------------------------------------------
+Log Entry : 1:32:24 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 10
+----------------------------------------------------------------------------------
+Log Entry : 1:32:29 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 3
+----------------------------------------------------------------------------------
+Log Entry : 1:32:48 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 6
+----------------------------------------------------------------------------------
+Log Entry : 1:32:53 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 4
+----------------------------------------------------------------------------------
+Log Entry : 1:33:08 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 1:33:13 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 9
+----------------------------------------------------------------------------------
+Log Entry : 1:33:18 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 1:34:32 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 1:34:37 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 8
+----------------------------------------------------------------------------------
+Log Entry : 1:34:46 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 12
+----------------------------------------------------------------------------------
+Log Entry : 1:34:51 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 9
+----------------------------------------------------------------------------------
+Log Entry : 1:35:01 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 1
+----------------------------------------------------------------------------------
+Log Entry : 1:35:06 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:11 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:16 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:21 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:26 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:31 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:36 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:45 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:50 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:35:55 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:00 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:05 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:10 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:15 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:20 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:25 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 1:36:30 PM Friday, April 29, 2022
+:Time Interval: 5 Seconds
+Typing time interval between 100 and 5000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------

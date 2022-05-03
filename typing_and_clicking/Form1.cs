@@ -70,7 +70,20 @@ namespace typing_and_clicking
         };
 
 
-        private int prevHour=0, prevMin=0, prevSec=0; 
+        private int prevHour=0, prevMin=0, prevSec=0;
+
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
 
 
         /**
@@ -539,6 +552,11 @@ namespace typing_and_clicking
             System.Environment.Exit(0);
         }
 
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
@@ -762,13 +780,13 @@ namespace typing_and_clicking
                         PressedStopButton();
                     }
                      
-                    else if ((Keyboard.GetKeyStates(Key.H) & (Keyboard.GetKeyStates(Key.LeftCtrl))  & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.H) & (Keyboard.GetKeyStates(Key.LeftAlt))  & KeyStates.Down) > 0)
                     {
                         Console.WriteLine("You've triggered to hide the application...");
                         this.Hide();
                     }
                     
-                    else if ((Keyboard.GetKeyStates(Key.S) & (Keyboard.GetKeyStates(Key.LeftCtrl)) & KeyStates.Down) > 0)
+                    else if ((Keyboard.GetKeyStates(Key.S) & (Keyboard.GetKeyStates(Key.LeftAlt)) & KeyStates.Down) > 0)
                     { 
                         if (Program.UserID  == "loggedin") {   
                             Console.WriteLine("You've triggered to show the application..."); 
