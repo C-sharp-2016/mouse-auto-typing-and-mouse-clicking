@@ -12,15 +12,21 @@ using System.Threading;
 using System.IO;
 using System.Media;
 using System.Windows.Input;
- 
+using System.Net.Http;
+
 namespace typing_and_clicking
 {
     public partial class Form1 : Form
     {
 
+        private string announcement = "..";
+
+        // system will know if we will allow the user to use the app or not.
+        private int accessStatus = 200;
+
 
         //public static LocalDataStoreSlot dataslot = Thread.AllocateDataSlot();
-
+         
 
         // src: keys send - http://go-gaga-over-testing.blogspot.com/2011/01/sendkeys-cheat-sheet.html   
         private int log_click_total = 0, log_typing_total = 0, sounds_time_play_value = 0;
@@ -94,11 +100,11 @@ namespace typing_and_clicking
         private void timer2_Tick(object sender, EventArgs e)
         { 
             if (enable_click_checkbox1.Checked == true)
-            { 
+            {
                 try
-                { 
-                    Console.WriteLine("timer 2 ticking"); 
-                    Random r = new Random(); 
+                {
+                    Console.WriteLine("timer 2 ticking");
+                    Random r = new Random();
 
                     timer2.Interval = r.Next(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
                     mouse_click_counter++;
@@ -114,14 +120,13 @@ namespace typing_and_clicking
                     Console.WriteLine("Clicking Pause " + timer2.Interval);
 
                     log_click_total++;
-
-
-
-                    sounds_src = "sound/Mouse_click.wav";
-                    Thread th = new Thread(playSoundsDynamic);
-                    th.Start();
-
-
+                     
+                    if (checkbox_clicking_sound.Checked == true)
+                    { 
+                        sounds_src = "sound/Mouse_click.wav";
+                        Thread th = new Thread(playSoundsDynamic);
+                        th.Start();
+                    }  
                 }
                 catch (Exception ex)
                 {
@@ -557,6 +562,11 @@ namespace typing_and_clicking
 
         }
 
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
@@ -607,27 +617,58 @@ namespace typing_and_clicking
          * 
          */
         private void button1_Click(object sender, EventArgs e)
-        { 
-            keypressed_label.Text = "Start"; 
-            timer1.Start();
-            timer2.Start(); 
-            //enable fields for interval
-            textBox1.Enabled = false;
-            textBox2.Enabled = false;
-            textBox3.Enabled = false;
-            textBox4.Enabled = false;
-            sound_duration_textBox5.Enabled = false;
-            sounds_time_play_type_comboBox1.Enabled = false;
-            comboBox1.Enabled = false;
-            sounds_time_play_value_textBox5.Enabled = false;
-            ctr_plug_tab_checkbox1.Enabled = false;  
-             enable_click_checkbox1.Enabled = false;
-            enable_typing_checkbox2.Enabled = false;
+        {
+
+            // todo - check if the user is allowed to start or not
+
+            /*
+            HttpClient client = new HttpClient();
+            //   client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
+            client.BaseAddress = new Uri("https://easimpt.com/api/");
+            HttpResponseMessage response = client.GetAsync("authenticate/check?token=12345678").Result;
+            accessStatus = response.Content.ReadAsStringAsync().Result;
+            */
+            Console.WriteLine(accessStatus);
+             
+            label_announcement.Text = announcement; // announcement
+
+            if (accessStatus == 200) {
+               // label_announcement.Text = "Success";
+                keypressed_label.Text = "Start";
+                timer1.Start(); // tpying
+                timer2.Start(); // clicking
+                //enable fields for interval
+                textBox1.Enabled = false;
+                textBox2.Enabled = false;
+                textBox3.Enabled = false;
+                textBox4.Enabled = false;
+                sound_duration_textBox5.Enabled = false;
+                sounds_time_play_type_comboBox1.Enabled = false;
+                comboBox1.Enabled = false;
+                sounds_time_play_value_textBox5.Enabled = false;
+                ctr_plug_tab_checkbox1.Enabled = false;
+                enable_click_checkbox1.Enabled = false;
+                enable_typing_checkbox2.Enabled = false;
 
 
 
-            start.Enabled = false;
-            button2.Enabled = true;
+                start.Enabled = false;
+                button2.Enabled = true;
+            } 
+            else
+            { 
+                string title = "Announcement";
+                string message = "Sorry, using this app isn't allowed. Please contact the owner in order to resume using this app.";
+                  
+                // label_announcement.Text = "Sorry, using this app isn't allowed. \n Please contact the owner in order to resume \n using this app.";
+                // Console.WriteLine("Sorry, using this app isn't allowed. Please contact the owner in order to resume using this app.");
+
+
+                MessageBox.Show(message, title);
+            }
+
+
+
         }
 
         public void Clicker(int x, int y)
@@ -730,9 +771,15 @@ namespace typing_and_clicking
 
 
 
-                    sounds_src = "sound/typewriter-key-1.wav";
-                    Thread th = new Thread(playSoundsDynamic);
-                    th.Start();
+                    Console.WriteLine(" TYPING SOUND SETTINGS " + checkbox_typing_sound.Checked);
+                    if(checkbox_typing_sound.Checked == true)
+                    {
+                        sounds_src = "sound/typewriter-key-1.wav";
+                        Thread th = new Thread(playSoundsDynamic);
+                        th.Start();
+                    }
+
+
                 }
                 catch (Exception ex)
                 {

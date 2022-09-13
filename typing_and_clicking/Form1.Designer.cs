@@ -69,13 +69,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
+            this.label_announcement = new System.Windows.Forms.Label();
+            this.checkbox_typing_sound = new System.Windows.Forms.CheckBox();
+            this.checkbox_clicking_sound = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(15, 89);
+            this.start.Location = new System.Drawing.Point(15, 83);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(124, 39);
+            this.start.Size = new System.Drawing.Size(126, 31);
             this.start.TabIndex = 0;
             this.start.Text = "Start";
             this.start.UseVisualStyleBackColor = true;
@@ -83,9 +86,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(153, 89);
+            this.button2.Location = new System.Drawing.Point(153, 83);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 39);
+            this.button2.Size = new System.Drawing.Size(119, 31);
             this.button2.TabIndex = 1;
             this.button2.Text = "Pause";
             this.button2.UseVisualStyleBackColor = true;
@@ -190,9 +193,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 134);
+            this.button3.Location = new System.Drawing.Point(14, 118);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(257, 43);
+            this.button3.Size = new System.Drawing.Size(258, 29);
             this.button3.TabIndex = 12;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
@@ -440,11 +443,50 @@
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // label_announcement
+            // 
+            this.label_announcement.AutoSize = true;
+            this.label_announcement.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label_announcement.Location = new System.Drawing.Point(15, 150);
+            this.label_announcement.Name = "label_announcement";
+            this.label_announcement.Size = new System.Drawing.Size(16, 13);
+            this.label_announcement.TabIndex = 44;
+            this.label_announcement.Text = "...";
+            // 
+            // checkbox_typing_sound
+            // 
+            this.checkbox_typing_sound.AutoSize = true;
+            this.checkbox_typing_sound.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkbox_typing_sound.Checked = true;
+            this.checkbox_typing_sound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_typing_sound.Location = new System.Drawing.Point(162, 419);
+            this.checkbox_typing_sound.Name = "checkbox_typing_sound";
+            this.checkbox_typing_sound.Size = new System.Drawing.Size(100, 17);
+            this.checkbox_typing_sound.TabIndex = 47;
+            this.checkbox_typing_sound.Text = "Typing Sounds:";
+            this.checkbox_typing_sound.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_clicking_sound
+            // 
+            this.checkbox_clicking_sound.AutoSize = true;
+            this.checkbox_clicking_sound.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkbox_clicking_sound.Checked = true;
+            this.checkbox_clicking_sound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_clicking_sound.Location = new System.Drawing.Point(157, 442);
+            this.checkbox_clicking_sound.Name = "checkbox_clicking_sound";
+            this.checkbox_clicking_sound.Size = new System.Drawing.Size(105, 17);
+            this.checkbox_clicking_sound.TabIndex = 48;
+            this.checkbox_clicking_sound.Text = "Clicking Sounds:";
+            this.checkbox_clicking_sound.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 593);
+            this.ClientSize = new System.Drawing.Size(307, 609);
+            this.Controls.Add(this.checkbox_clicking_sound);
+            this.Controls.Add(this.checkbox_typing_sound);
+            this.Controls.Add(this.label_announcement);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button1);
@@ -533,6 +575,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Label label_announcement;
+        private System.Windows.Forms.CheckBox checkbox_typing_sound;
+        private System.Windows.Forms.CheckBox checkbox_clicking_sound;
     }
 }
 
