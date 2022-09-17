@@ -2565,3 +2565,94 @@ Clicking time interval between 100 and 5000
 Total Click: 0
 Total Typing: 0
 ----------------------------------------------------------------------------------
+Log Entry : 10:09:58 PM Tuesday, September 13, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:12:55 PM Tuesday, September 13, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:15:52 PM Tuesday, September 13, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:02:15 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 7
+----------------------------------------------------------------------------------
+Log Entry : 10:41:20 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:44:18 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:47:15 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:50:13 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:53:10 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:56:07 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 10:59:04 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 11:02:02 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 11:04:59 AM Saturday, September 17, 2022
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------

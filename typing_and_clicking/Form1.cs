@@ -12,7 +12,8 @@ using System.Threading;
 using System.IO;
 using System.Media;
 using System.Windows.Input;
-using System.Net.Http;
+
+using System.Net.Http; 
 
 namespace typing_and_clicking
 {
@@ -617,7 +618,20 @@ namespace typing_and_clicking
          * 
          */
         private void button1_Click(object sender, EventArgs e)
-        {
+        { 
+            Authentication Auth = new Authentication();
+
+            Console.WriteLine(" Auth Token: " + Auth.getLoggedin());
+             
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://easimpt.test/api/");
+           HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin()).Result;
+            
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+
+
+
+            // Console.WriteLine(" testResponse ", testResponse); 
 
             // todo - check if the user is allowed to start or not
 
@@ -628,11 +642,19 @@ namespace typing_and_clicking
             HttpResponseMessage response = client.GetAsync("authenticate/check?token=12345678").Result;
             accessStatus = response.Content.ReadAsStringAsync().Result;
             */
-            Console.WriteLine(accessStatus);
-             
+            Console.WriteLine("access response = " + statusResponse);
+
+
+            /*JObject joResponse = JObject.Parse(response);
+            JObject ojObject = (JObject)joResponse["response"];
+            JArray array = (JArray)ojObject["chats"];
+            int id = Convert.ToInt32(array[0].toString());
+            */
+
+
             label_announcement.Text = announcement; // announcement
 
-            if (accessStatus == 200) {
+            if (statusResponse == "1") {
                // label_announcement.Text = "Success";
                 keypressed_label.Text = "Start";
                 timer1.Start(); // tpying
@@ -658,17 +680,21 @@ namespace typing_and_clicking
             else
             { 
                 string title = "Announcement";
-                string message = "Sorry, using this app isn't allowed. Please contact the owner in order to resume using this app.";
-                  
+                string message = "";
+
+                if (statusResponse == "5")
+                {
+                      message = "Please logout and login again \n\n STATUS: " + statusResponse;
+                } else
+                { 
+                  message = "Sorry, using this app isn't allowed. Please contact the owner in order to resume using this app. \n\n STATUS: "  + statusResponse;
+                }
+                 
                 // label_announcement.Text = "Sorry, using this app isn't allowed. \n Please contact the owner in order to resume \n using this app.";
                 // Console.WriteLine("Sorry, using this app isn't allowed. Please contact the owner in order to resume using this app.");
-
-
+                 
                 MessageBox.Show(message, title);
-            }
-
-
-
+            } 
         }
 
         public void Clicker(int x, int y)
