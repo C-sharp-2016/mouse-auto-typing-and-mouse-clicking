@@ -72,6 +72,26 @@
             this.label_announcement = new System.Windows.Forms.Label();
             this.checkbox_typing_sound = new System.Windows.Forms.CheckBox();
             this.checkbox_clicking_sound = new System.Windows.Forms.CheckBox();
+            this.radioButton_TimerSetting_Auto_Shutdown = new System.Windows.Forms.RadioButton();
+            this.radioButton_TimerSetting_Auto_Stop = new System.Windows.Forms.RadioButton();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.radioButton_TimerSetting_Do_Nothing = new System.Windows.Forms.RadioButton();
+            this.timer_setting = new System.Windows.Forms.Timer(this.components);
+            this.numeric_Setting_Hour = new System.Windows.Forms.NumericUpDown();
+            this.numeric_Setting_Minute = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkbox_Setting_Enable_Disable = new System.Windows.Forms.CheckBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label_Setting_Time_Setting_Display = new System.Windows.Forms.Label();
+            this.label_Setting_Time_System_Display = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label_Setting_Time_Total = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Setting_Hour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Setting_Minute)).BeginInit();
             this.SuspendLayout();
             // 
             // start
@@ -414,7 +434,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Location = new System.Drawing.Point(197, 12);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 41;
@@ -425,7 +445,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(14, 67);
+            this.label19.Location = new System.Drawing.Point(13, 67);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(259, 13);
             this.label19.TabIndex = 42;
@@ -435,7 +455,7 @@
             // btn_close
             // 
             this.btn_close.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_close.Location = new System.Drawing.Point(12, 12);
+            this.btn_close.Location = new System.Drawing.Point(197, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 43;
@@ -479,11 +499,195 @@
             this.checkbox_clicking_sound.Text = "Clicking Sounds:";
             this.checkbox_clicking_sound.UseVisualStyleBackColor = true;
             // 
+            // radioButton_TimerSetting_Auto_Shutdown
+            // 
+            this.radioButton_TimerSetting_Auto_Shutdown.AutoSize = true;
+            this.radioButton_TimerSetting_Auto_Shutdown.Location = new System.Drawing.Point(480, 150);
+            this.radioButton_TimerSetting_Auto_Shutdown.Name = "radioButton_TimerSetting_Auto_Shutdown";
+            this.radioButton_TimerSetting_Auto_Shutdown.Size = new System.Drawing.Size(73, 17);
+            this.radioButton_TimerSetting_Auto_Shutdown.TabIndex = 50;
+            this.radioButton_TimerSetting_Auto_Shutdown.TabStop = true;
+            this.radioButton_TimerSetting_Auto_Shutdown.Text = "Shutdown";
+            this.radioButton_TimerSetting_Auto_Shutdown.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_TimerSetting_Auto_Stop
+            // 
+            this.radioButton_TimerSetting_Auto_Stop.AutoSize = true;
+            this.radioButton_TimerSetting_Auto_Stop.Location = new System.Drawing.Point(390, 149);
+            this.radioButton_TimerSetting_Auto_Stop.Name = "radioButton_TimerSetting_Auto_Stop";
+            this.radioButton_TimerSetting_Auto_Stop.Size = new System.Drawing.Size(73, 17);
+            this.radioButton_TimerSetting_Auto_Stop.TabIndex = 51;
+            this.radioButton_TimerSetting_Auto_Stop.TabStop = true;
+            this.radioButton_TimerSetting_Auto_Stop.Text = "Stop-Time";
+            this.radioButton_TimerSetting_Auto_Stop.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(294, 107);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(254, 13);
+            this.label20.TabIndex = 53;
+            this.label20.Text = "Action when this time reached: 24hrs format required\r\n";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(294, 68);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(259, 13);
+            this.label21.TabIndex = 54;
+            this.label21.Text = "---------------------------------------------------------------------------------" +
+    "---";
+            // 
+            // radioButton_TimerSetting_Do_Nothing
+            // 
+            this.radioButton_TimerSetting_Do_Nothing.AutoSize = true;
+            this.radioButton_TimerSetting_Do_Nothing.Location = new System.Drawing.Point(297, 150);
+            this.radioButton_TimerSetting_Do_Nothing.Name = "radioButton_TimerSetting_Do_Nothing";
+            this.radioButton_TimerSetting_Do_Nothing.Size = new System.Drawing.Size(62, 17);
+            this.radioButton_TimerSetting_Do_Nothing.TabIndex = 55;
+            this.radioButton_TimerSetting_Do_Nothing.TabStop = true;
+            this.radioButton_TimerSetting_Do_Nothing.Text = "Nothing";
+            this.radioButton_TimerSetting_Do_Nothing.UseVisualStyleBackColor = true;
+            // 
+            // timer_setting
+            // 
+            this.timer_setting.Enabled = true;
+            this.timer_setting.Interval = 1000;
+            this.timer_setting.Tick += new System.EventHandler(this.timer_setting_Tick);
+            // 
+            // numeric_Setting_Hour
+            // 
+            this.numeric_Setting_Hour.Location = new System.Drawing.Point(328, 125);
+            this.numeric_Setting_Hour.Name = "numeric_Setting_Hour";
+            this.numeric_Setting_Hour.Size = new System.Drawing.Size(40, 20);
+            this.numeric_Setting_Hour.TabIndex = 56;
+            // 
+            // numeric_Setting_Minute
+            // 
+            this.numeric_Setting_Minute.Location = new System.Drawing.Point(423, 123);
+            this.numeric_Setting_Minute.Name = "numeric_Setting_Minute";
+            this.numeric_Setting_Minute.Size = new System.Drawing.Size(40, 20);
+            this.numeric_Setting_Minute.TabIndex = 57;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(294, 127);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(33, 13);
+            this.label22.TabIndex = 58;
+            this.label22.Text = "Hour:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(374, 127);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(47, 13);
+            this.label23.TabIndex = 59;
+            this.label23.Text = "Minutes:";
+            // 
+            // checkbox_Setting_Enable_Disable
+            // 
+            this.checkbox_Setting_Enable_Disable.AutoSize = true;
+            this.checkbox_Setting_Enable_Disable.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkbox_Setting_Enable_Disable.Location = new System.Drawing.Point(292, 84);
+            this.checkbox_Setting_Enable_Disable.Name = "checkbox_Setting_Enable_Disable";
+            this.checkbox_Setting_Enable_Disable.Size = new System.Drawing.Size(124, 17);
+            this.checkbox_Setting_Enable_Disable.TabIndex = 60;
+            this.checkbox_Setting_Enable_Disable.Text = "Enable Time Setting:";
+            this.checkbox_Setting_Enable_Disable.UseVisualStyleBackColor = true;
+            this.checkbox_Setting_Enable_Disable.CheckedChanged += new System.EventHandler(this.checkbox_Setting_Enable_Disable_CheckedChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(294, 268);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(259, 13);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "---------------------------------------------------------------------------------" +
+    "---";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(295, 207);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(70, 13);
+            this.label25.TabIndex = 62;
+            this.label25.Text = "System Time:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(294, 181);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 13);
+            this.label26.TabIndex = 63;
+            this.label26.Text = "Setting Time:";
+            // 
+            // label_Setting_Time_Setting_Display
+            // 
+            this.label_Setting_Time_Setting_Display.AutoSize = true;
+            this.label_Setting_Time_Setting_Display.Location = new System.Drawing.Point(368, 181);
+            this.label_Setting_Time_Setting_Display.Name = "label_Setting_Time_Setting_Display";
+            this.label_Setting_Time_Setting_Display.Size = new System.Drawing.Size(34, 13);
+            this.label_Setting_Time_Setting_Display.TabIndex = 64;
+            this.label_Setting_Time_Setting_Display.Text = "00:00";
+            // 
+            // label_Setting_Time_System_Display
+            // 
+            this.label_Setting_Time_System_Display.AutoSize = true;
+            this.label_Setting_Time_System_Display.Location = new System.Drawing.Point(369, 207);
+            this.label_Setting_Time_System_Display.Name = "label_Setting_Time_System_Display";
+            this.label_Setting_Time_System_Display.Size = new System.Drawing.Size(34, 13);
+            this.label_Setting_Time_System_Display.TabIndex = 65;
+            this.label_Setting_Time_System_Display.Text = "00:00";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(295, 229);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 13);
+            this.label27.TabIndex = 66;
+            this.label27.Text = "Time Left (hr:min):";
+            // 
+            // label_Setting_Time_Total
+            // 
+            this.label_Setting_Time_Total.AutoSize = true;
+            this.label_Setting_Time_Total.Location = new System.Drawing.Point(392, 229);
+            this.label_Setting_Time_Total.Name = "label_Setting_Time_Total";
+            this.label_Setting_Time_Total.Size = new System.Drawing.Size(34, 13);
+            this.label_Setting_Time_Total.TabIndex = 67;
+            this.label_Setting_Time_Total.Text = "00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 609);
+            this.ClientSize = new System.Drawing.Size(571, 609);
+            this.Controls.Add(this.label_Setting_Time_Total);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label_Setting_Time_System_Display);
+            this.Controls.Add(this.label_Setting_Time_Setting_Display);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.checkbox_Setting_Enable_Disable);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.numeric_Setting_Minute);
+            this.Controls.Add(this.numeric_Setting_Hour);
+            this.Controls.Add(this.radioButton_TimerSetting_Do_Nothing);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.radioButton_TimerSetting_Auto_Stop);
+            this.Controls.Add(this.radioButton_TimerSetting_Auto_Shutdown);
             this.Controls.Add(this.checkbox_clicking_sound);
             this.Controls.Add(this.checkbox_typing_sound);
             this.Controls.Add(this.label_announcement);
@@ -528,6 +732,8 @@
             this.ShowIcon = false;
             this.Text = "...";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Setting_Hour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Setting_Minute)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,6 +784,24 @@
         private System.Windows.Forms.Label label_announcement;
         private System.Windows.Forms.CheckBox checkbox_typing_sound;
         private System.Windows.Forms.CheckBox checkbox_clicking_sound;
+        private System.Windows.Forms.RadioButton radioButton_TimerSetting_Auto_Shutdown;
+        private System.Windows.Forms.RadioButton radioButton_TimerSetting_Auto_Stop;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.RadioButton radioButton_TimerSetting_Do_Nothing;
+        private System.Windows.Forms.Timer timer_setting;
+        private System.Windows.Forms.NumericUpDown numeric_Setting_Hour;
+        private System.Windows.Forms.NumericUpDown numeric_Setting_Minute;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckBox checkbox_Setting_Enable_Disable;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label_Setting_Time_Setting_Display;
+        private System.Windows.Forms.Label label_Setting_Time_System_Display;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label_Setting_Time_Total;
     }
 }
 

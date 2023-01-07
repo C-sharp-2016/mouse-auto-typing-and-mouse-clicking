@@ -58,7 +58,6 @@ D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\System.Text.Json.xml
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\bin\Debug\System.ValueTuple.xml
-D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.AssemblyReference.cache
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Form1.resources
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Login.resources
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.Properties.Resources.resources
@@ -69,3 +68,4 @@ D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.CopyComplete
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.exe
 D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.pdb
+D:\laragon\www\c-sharp\mouse-auto-typing-and-mouse-clicking\typing_and_clicking\obj\Debug\typing_and_clicking.csproj.AssemblyReference.cache

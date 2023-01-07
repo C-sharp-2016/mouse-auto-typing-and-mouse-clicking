@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+using System.Reflection;
 
 
 namespace typing_and_clicking
@@ -16,10 +17,21 @@ namespace typing_and_clicking
     class Authentication
     {
 
-        public void login(string token)
+        private string getBasePath()
         {
+            string origAssemblyLocation = Assembly.GetExecutingAssembly().CodeBase;
+
+            return Path.GetDirectoryName(origAssemblyLocation);
+        }
+
+
+        public void login(string token)
+        { 
             try
             {
+               // Console.WriteLine("     base path " + this.getBasePath());
+               //Console.WriteLine("     base path " + this.getBasePath() + "/auth/authentication.txt");
+                 
                 this.logout(); 
 
                 using (StreamWriter w = File.AppendText("auth/authentication.txt"))
@@ -65,9 +77,7 @@ namespace typing_and_clicking
                 //using (StreamWriter w = File.AppendText("auth/authentication.txt"))
                 //{
                     File.WriteAllText("auth/authentication.txt", "");
-                //}
-
-
+                //} 
             }
             catch (Exception ex)
             {

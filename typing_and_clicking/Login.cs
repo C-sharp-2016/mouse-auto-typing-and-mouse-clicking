@@ -60,8 +60,8 @@ namespace typing_and_clicking
 
             HttpClient client = new HttpClient();
             // client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
-            // client.BaseAddress = new Uri("https://easimpt.com/api/");
-            client.BaseAddress = new Uri("http://easimpt.test/api/");
+            client.BaseAddress = new Uri("https://app.easimpt.com/api/");
+            // client.BaseAddress = new Uri("http://easimpt.test/api/");
             HttpResponseMessage response = client.GetAsync("authenticate/login?password=" + password.Text + "&email="+username.Text).Result;
             loginStatus = response.Content.ReadAsStringAsync().Result;
              
