@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="typing_and_clicking.exe" size="44000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="typing_and_clicking.exe" size="1171936">
       <assemblyIdentity name="typing_and_clicking" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PvAwNm7Zf1GB3r+kkOTmDxkYkblFPwFk0p4oxtNxnW8=</dsig:DigestValue>
+        <dsig:DigestValue>iujt/wZBF+oi0eIdo9E9yxxbF40KDSlUhkyvvDWdV4o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

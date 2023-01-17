@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System; 
 using System.Windows.Forms;
-using System.Net.Http;
-using System.Threading; 
-
-
+using System.Net.Http; 
+// https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.codebase?source=recommendations&view=net-6.0
+using System.Reflection;
 // resources: https://www.demo2s.com/csharp/csharp-thread-setdata-localdatastoreslot-slot-object-data.html
 namespace typing_and_clicking
 {
+
+
     public partial class Login : Form
     {
      
         private string loginStatus = "";
 
+        private string apiBaseUrl = "https://app.easimpt.com/api/";
+        // private string apiBaseUrl = "http://easimpt.test/api/";
 
         public Login()
         {
@@ -52,7 +48,26 @@ namespace typing_and_clicking
         private void login_btn_Click(object sender, EventArgs e)
         {
             this.setLogin();
-        } 
+        }
+
+        private string apiEasimptLogin ()
+        {
+            string origAssemblyLocation = Assembly.GetExecutingAssembly().CodeBase;
+
+            string origAssemblyL = System.Reflection.Assembly.GetEntryAssembly().Location;
+
+            Authentication Auth = new Authentication();
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin() + "&action=login").Result;
+
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+
+
+            return statusResponse;
+        }
+
         private void setLogin ()
         {
             label_login_wait.Text = "Please wait..";
@@ -60,12 +75,12 @@ namespace typing_and_clicking
 
             HttpClient client = new HttpClient();
             // client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
-            client.BaseAddress = new Uri("https://app.easimpt.com/api/");
+            client.BaseAddress = new Uri(apiBaseUrl);
             // client.BaseAddress = new Uri("http://easimpt.test/api/");
             HttpResponseMessage response = client.GetAsync("authenticate/login?password=" + password.Text + "&email="+username.Text).Result;
             loginStatus = response.Content.ReadAsStringAsync().Result;
              
-            Console.WriteLine(loginStatus);
+           // Console.WriteLine(loginStatus);
 
            /*
            if (contents.response)
@@ -104,6 +119,9 @@ namespace typing_and_clicking
                 //if ((string)Thread.GetData(Program.dataslot) == "loggedin")
                 if (Program.UserID == "loggedin")
                 {
+
+                    apiEasimptLogin();
+
                     // this will hide the current login form if the authentication is correct.
                     this.Hide();
 

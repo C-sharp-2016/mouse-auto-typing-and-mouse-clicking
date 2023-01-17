@@ -38,11 +38,13 @@ namespace typing_and_clicking
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             Authentication Auth = new Authentication(); 
 
             Console.WriteLine("Program is initiated.."); 
             Console.WriteLine(" Auth Token: " + Auth.getLoggedin());
-             
+
+            /*
             if (Auth.getLoggedin() != string.Empty)
             {
                 UserID = "loggedin";
@@ -55,10 +57,14 @@ namespace typing_and_clicking
             else
             {
                 Application.Run(new Login());
-            } 
+            }  
+            */
+
+            Application.Run(new ChatRoom());
+
         }
 
-         
+
 
 
 

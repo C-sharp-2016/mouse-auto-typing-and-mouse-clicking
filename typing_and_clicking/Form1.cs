@@ -22,6 +22,10 @@ namespace typing_and_clicking
     public partial class Form1 : Form
     {
 
+
+        private string apiBaseUrl = "https://app.easimpt.com/api/";
+        // private string apiBaseUrl = "http://easimpt.test/api/";
+
         private string announcement = "..";
 
         // system will know if we will allow the user to use the app or not.
@@ -531,9 +535,10 @@ namespace typing_and_clicking
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+            apiEasimptLogout();
+
             //if ((string)Thread.GetData(Program.dataslot) == "loggedin")
-
-
+             
             Authentication Auth = new Authentication();
             Auth.logout();
 
@@ -555,6 +560,8 @@ namespace typing_and_clicking
         }
         private void btn_close_Click(object sender, EventArgs e)
         {
+            apiEasimptClose(); 
+
             System.Windows.Forms.Application.ExitThread();
 
             System.Windows.Forms.Application.Exit();
@@ -611,7 +618,7 @@ namespace typing_and_clicking
             else
             {
 
-                Console.WriteLine("Timer settings - can't do disable or enable because it's not checked");
+                // Console.WriteLine("Timer settings - can't do disable or enable because it's not checked");
 
                 return timerSettingDisable();
             }
@@ -649,7 +656,7 @@ namespace typing_and_clicking
                 timerSettingReset(); 
 
                 System.Windows.Forms.MessageBox.Show("Invalid input");
-                Console.WriteLine("{0} Exception caught.", e);
+                // Console.WriteLine("{0} Exception caught.", e);
             }
               
             return minutes;
@@ -682,13 +689,13 @@ namespace typing_and_clicking
 
             if (checkbox_Setting_Enable_Disable.Checked == true)
             { 
-                Console.WriteLine("custom hour " + settingHour);
+                // Console.WriteLine("custom hour " + settingHour);
 
-                Console.WriteLine("custom minute " + settingMinute);
+                // Console.WriteLine("custom minute " + settingMinute);
 
-                Console.WriteLine(" radioButton_TimerSetting_Do_Nothing = " + radioButton_TimerSetting_Do_Nothing.Checked);
-                Console.WriteLine(" radioButton_TimerSetting_Auto_Stop = " + radioButton_TimerSetting_Auto_Stop.Checked);
-                Console.WriteLine(" radioButton_TimerSetting_Shutdown = " + radioButton_TimerSetting_Auto_Shutdown.Checked);
+                // Console.WriteLine(" radioButton_TimerSetting_Do_Nothing = " + radioButton_TimerSetting_Do_Nothing.Checked);
+                // Console.WriteLine(" radioButton_TimerSetting_Auto_Stop = " + radioButton_TimerSetting_Auto_Stop.Checked);
+                // Console.WriteLine(" radioButton_TimerSetting_Shutdown = " + radioButton_TimerSetting_Auto_Shutdown.Checked);
 
                 if (start.Enabled == false)
                 {
@@ -699,7 +706,7 @@ namespace typing_and_clicking
                         {
 
                             pauseApp();
-                            Console.WriteLine("Time Setting Running: Pause Timer");
+                            // Console.WriteLine("Time Setting Running: Pause Timer");
 
                             
                         }
@@ -707,70 +714,70 @@ namespace typing_and_clicking
                         {
 
                            shutdownApp();
-                            Console.WriteLine("Time Setting Running: Shutdown Unit");
+                            // Console.WriteLine("Time Setting Running: Shutdown Unit");
                         }
                         else
                         {
-                            Console.WriteLine("Time Setting Running:  Do Nothing");
+                            // Console.WriteLine("Time Setting Running:  Do Nothing");
                         }
                     }
                     else if (settingHour < hour)
                     {
-                        Console.WriteLine("Time Setting Running: Too much late");
+                        // Console.WriteLine("Time Setting Running: Too much late");
                     }
                     else
                     {
-                        Console.WriteLine("Waiting for time to arrive to execute time settings ");
+                        // Console.WriteLine("Waiting for time to arrive to execute time settings ");
 
-                        Console.WriteLine(" Time Set Hour: " + settingHour);
-                        Console.WriteLine(" Time Set Minute: " + settingMinute);
+                        // Console.WriteLine(" Time Set Hour: " + settingHour);
+                        // Console.WriteLine(" Time Set Minute: " + settingMinute);
 
-                        Console.WriteLine(" Time System Hour: " + hour);
-                        Console.WriteLine(" Time System Minute: " + minute);
+                        // Console.WriteLine(" Time System Hour: " + hour);
+                        // Console.WriteLine(" Time System Minute: " + minute);
                     }
                 }
                 else
                 {
                     if (settingHour == hour && settingMinute == minute)
                     {
-                        Console.WriteLine("Time Setting: It's time now");
+                        // Console.WriteLine("Time Setting: It's time now");
 
                         if (radioButton_TimerSetting_Auto_Stop.Checked == true)
                         {
-                            Console.WriteLine("Stop Timer");
+                            // Console.WriteLine("Stop Timer");
                         }
                         else if (radioButton_TimerSetting_Auto_Shutdown.Checked == true)
                         {
-                            Console.WriteLine("Shutdown Unit");
+                            // Console.WriteLine("Shutdown Unit");
                         }
                         else
                         {
-                            Console.WriteLine("Do Nothing");
+                            // Console.WriteLine("Do Nothing");
                         }
                     }
                     else if ((settingHour == hour && settingMinute > minute) ||
                             (settingHour > hour)) 
                     {
                          
-                         Console.WriteLine("Time Setting: Correct Setup - you are waiting to reach time time. Start now! ");
+                         // Console.WriteLine("Time Setting: Correct Setup - you are waiting to reach time time. Start now! ");
                         
                     }
                     else if (settingHour < hour)
                     {
-                        Console.WriteLine("Time Setting: Too much late");
+                        // Console.WriteLine("Time Setting: Too much late");
                     }
                     else
                     {
-                        Console.WriteLine("Time Setting: Nothing");
+                        // Console.WriteLine("Time Setting: Nothing");
                     }
                      
-                    Console.WriteLine("Waiting to start for time settings");
+                    // Console.WriteLine("Waiting to start for time settings");
 
-                    Console.WriteLine(" Time Set Hour: " + settingHour);
-                    Console.WriteLine(" Time Set Minute: " + settingMinute);
+                    // Console.WriteLine(" Time Set Hour: " + settingHour);
+                    // Console.WriteLine(" Time Set Minute: " + settingMinute);
 
-                    Console.WriteLine(" Time System Hour: " + hour);
-                    Console.WriteLine(" Time System Minute: " + minute);
+                    // Console.WriteLine(" Time System Hour: " + hour);
+                    // Console.WriteLine(" Time System Minute: " + minute);
                 }
                  
                 label_Setting_Time_Setting_Display.Text = settingHour + ":" + settingMinute;
@@ -780,7 +787,7 @@ namespace typing_and_clicking
             }
             else
             {
-                Console.WriteLine(" Timer Settings isn't enabled (countdown - stop, shutdown) ");
+                // Console.WriteLine(" Timer Settings isn't enabled (countdown - stop, shutdown) ");
             }
              
             // string[] words = now.TimeOfDay.Split(':');
@@ -849,55 +856,79 @@ namespace typing_and_clicking
         private const int MOUSEEVENTF_RIGHTDOWN = 0x0008; 
         
         
+
+
+        private string apiEasimptStart()
+        {
+            string origAssemblyLocation = Assembly.GetExecutingAssembly().CodeBase;
+
+            string origAssemblyL = System.Reflection.Assembly.GetEntryAssembly().Location;
+  
+            Authentication Auth = new Authentication();
+             
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin() + "&action=start").Result;
+
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+             
+             
+            return statusResponse;   
+        }
+
+
+        private string apiEasimptStop()
+        {
+
+            Authentication Auth = new Authentication();
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin() + "&action=stop").Result;
+
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+
+
+            return statusResponse;
+        }
+
+        private string apiEasimptClose()
+        {
+
+            Authentication Auth = new Authentication();
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin() + "&action=close").Result;
+
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+
+
+            return statusResponse;
+        }
+
+        private string apiEasimptLogout()
+        {
+
+            Authentication Auth = new Authentication();
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin() + "&action=logout").Result;
+
+            string statusResponse = response.Content.ReadAsStringAsync().Result;
+
+
+            return statusResponse;
+        }
+
         /**
          * Start button clicked
          * 
          */
         private void button1_Click(object sender, EventArgs e)
-        {
-
-            string origAssemblyLocation = Assembly.GetExecutingAssembly().CodeBase;
-
-            string origAssemblyL = System.Reflection.Assembly.GetEntryAssembly().Location;
-
-            // Console.WriteLine("Application.StartupPath; " + origAssemblyLocation);
-            // Console.WriteLine("origAssemblyL; " + origAssemblyL);
-            // Console.WriteLine("origAssemblyL; " + Path.GetDirectoryName(origAssemblyL));
-        
-
-            Authentication Auth = new Authentication();
-
-            // Console.WriteLine(" Auth Token: " + Auth.getLoggedin());
-             
-            HttpClient client = new HttpClient();
-            // client.BaseAddress = new Uri("http://easimpt.test/api/");
-            client.BaseAddress = new Uri("https://app.easimpt.com/api/");
-            HttpResponseMessage response = client.GetAsync("authenticate/desktp-timer-start?token=" + Auth.getLoggedin()).Result;
-            
-            string statusResponse = response.Content.ReadAsStringAsync().Result;
-
-
-
-            // // Console.WriteLine(" testResponse ", testResponse);
-
-            // todo - check if the user is allowed to start or not
-
-            /*
-            HttpClient client = new HttpClient();
-            //   client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
-            client.BaseAddress = new Uri("https://app.easimpt.com/api/");
-            HttpResponseMessage response = client.GetAsync("authenticate/check?token=12345678").Result;
-            accessStatus = response.Content.ReadAsStringAsync().Result;
-            */
-            // Console.WriteLine("access response = " + statusResponse);
-
-
-            /*JObject joResponse = JObject.Parse(response);
-            JObject ojObject = (JObject)joResponse["response"];
-            JArray array = (JArray)ojObject["chats"];
-            int id = Convert.ToInt32(array[0].toString());
-            */
-
+        { 
+            string statusResponse = apiEasimptStart(); 
 
             label_announcement.Text = announcement; // announcement
 
@@ -960,12 +991,15 @@ namespace typing_and_clicking
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             pauseApp(); 
         }
 
         private void pauseApp()
-        {
-
+        { 
+            apiEasimptStop(); 
+             
             timerSettingDisabledEnabled();
 
             keypressed_label.Text = "Stop";
@@ -1238,6 +1272,11 @@ namespace typing_and_clicking
         /// this is triggered when hold [esc] key
         void PressedStopButton()
             {
+
+
+
+                apiEasimptStop(); 
+
                 keypressed_label.Text = "Stop";
               
 
@@ -1259,7 +1298,7 @@ namespace typing_and_clicking
                 enable_typing_checkbox2.Enabled = true;
 
 
-            start.Enabled = true;
+                start.Enabled = true;
                 button2.Enabled = false;
                 // Console.WriteLine(keypressed_label.Text);
             }

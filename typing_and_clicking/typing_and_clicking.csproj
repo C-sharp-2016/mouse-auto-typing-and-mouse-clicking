@@ -75,6 +75,7 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -114,6 +115,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatRoom.Designer.cs">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -123,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChatRoom.resx">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +175,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pineapple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13237695_497567293760221_6539529999389890724_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walking.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

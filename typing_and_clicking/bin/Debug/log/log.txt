@@ -3473,3 +3473,24 @@ Clicking time interval between 100 and 5000
 Total Click: 0
 Total Typing: 260
 ----------------------------------------------------------------------------------
+Log Entry : 4:40:18 PM Saturday, January 7, 2023
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------
+Log Entry : 4:40:37 PM Saturday, January 7, 2023
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 17
+----------------------------------------------------------------------------------
+Log Entry : 5:00:31 PM Saturday, January 7, 2023
+:Time Interval: 3 Minutes
+Typing time interval between 100 and 2000
+Clicking time interval between 100 and 5000
+Total Click: 0
+Total Typing: 0
+----------------------------------------------------------------------------------

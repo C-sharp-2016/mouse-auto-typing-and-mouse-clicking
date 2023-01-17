@@ -2,27 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b084a0-3aa6-43e1-817c-d68a745d1272" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.vs/typing_and_clicking/v16/.suo" afterPath="$PROJECT_DIR$/.vs/typing_and_clicking/v16/.suo" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/Authentication.cs" afterPath="$PROJECT_DIR$/typing_and_clicking/Authentication.cs" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/Form1.Designer.cs" afterPath="$PROJECT_DIR$/typing_and_clicking/Form1.Designer.cs" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/Form1.cs" afterPath="$PROJECT_DIR$/typing_and_clicking/Form1.cs" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/Form1.resx" afterPath="$PROJECT_DIR$/typing_and_clicking/Form1.resx" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/Login.cs" afterPath="$PROJECT_DIR$/typing_and_clicking/Login.cs" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/Microsoft.Bcl.AsyncInterfaces.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/Microsoft.Bcl.AsyncInterfaces.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Buffers.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Buffers.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Memory.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Memory.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Numerics.Vectors.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Numerics.Vectors.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Runtime.CompilerServices.Unsafe.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Runtime.CompilerServices.Unsafe.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Text.Encodings.Web.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Text.Encodings.Web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Text.Json.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Text.Json.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Threading.Tasks.Extensions.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.Threading.Tasks.Extensions.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.ValueTuple.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/System.ValueTuple.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/sound/Mouse_click.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/sound/typewriter-key-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/sound/typewriter-line-break-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/typing_and_clicking.application" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/typing_and_clicking.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/typing_and_clicking.exe.config" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/typing_and_clicking.exe.manifest" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-010722/typing_and_clicking.pdb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-0911/sound/Mouse_click.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-0911/sound/typewriter-key-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-0911/sound/typewriter-line-break-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-0911/typing_and_clicking.application" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-0911/typing_and_clicking.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/P-Assistance-easimpt1011.rar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/sound/Mouse_click.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/sound/typewriter-key-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/sound/typewriter-line-break-1.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/typing_and_clicking.application" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/P-Assistance-1011/typing_and_clicking.exe" afterPath="" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/app.publish/typing_and_clicking.exe" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/app.publish/typing_and_clicking.exe" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/easimpt0522.rar" afterPath="" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/log/log.txt" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/log/log.txt" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.application" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.application" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.exe" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.exe" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.exe.manifest" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.exe.manifest" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.pdb" afterPath="$PROJECT_DIR$/typing_and_clicking/bin/Debug/typing_and_clicking.pdb" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.application" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.application" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.FileListAbsolute.txt" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.GenerateResource.cache" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.GenerateResource.cache" />
+      <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.AssemblyReference.cache" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.csproj.AssemblyReference.cache" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.exe" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.exe" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.exe.manifest" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.exe.manifest" />
       <change beforePath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.pdb" afterPath="$PROJECT_DIR$/typing_and_clicking/obj/Debug/typing_and_clicking.pdb" />
-      <change beforePath="$PROJECT_DIR$/typing_and_clicking/typing_and_clicking.csproj" afterPath="$PROJECT_DIR$/typing_and_clicking/typing_and_clicking.csproj" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,39 +62,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Form1.resx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form1.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authentication.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/typing_and_clicking/Authentication.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -86,6 +98,10 @@
       <find>now.Minute</find>
       <find>shutdownApp</find>
       <find>Write</find>
+      <find>Console.WriteLine(</find>
+      <find>Console.WriteLine(</find>
+      <find>accessStatus</find>
+      <find>announcement</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,8 +122,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="174" />
+    <option name="y" value="87" />
     <option name="width" value="974" />
     <option name="height" value="843" />
   </component>
@@ -161,6 +177,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="D:/Docker/mr-b/athena-private" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,33 +208,35 @@
       <workItem from="1673040309475" duration="672000" />
       <workItem from="1673041711836" duration="2262000" />
       <workItem from="1673047931917" duration="8496000" />
+      <workItem from="1673059612925" duration="638000" />
+      <workItem from="1673074778367" duration="3558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11473000" />
+    <option name="totallyTimeSpent" value="15669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2543235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,63 +254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Authentication.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="51" lean-forward="false" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="49" lean-forward="true" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -307,6 +269,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3026">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Authentication.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="182" column="51" lean-forward="false" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="49" lean-forward="true" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Authentication.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typing_and_clicking/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="613" column="19" lean-forward="false" selection-start-line="613" selection-start-column="19" selection-end-line="613" selection-end-column="19" />
+          <caret line="651" column="19" lean-forward="false" selection-start-line="651" selection-start-column="19" selection-end-line="651" selection-end-column="19" />
+          <caret line="684" column="19" lean-forward="false" selection-start-line="684" selection-start-column="19" selection-end-line="684" selection-end-column="19" />
+          <caret line="686" column="19" lean-forward="false" selection-start-line="686" selection-start-column="19" selection-end-line="686" selection-end-column="19" />
+          <caret line="688" column="19" lean-forward="false" selection-start-line="688" selection-start-column="19" selection-end-line="688" selection-end-column="19" />
+          <caret line="689" column="19" lean-forward="false" selection-start-line="689" selection-start-column="19" selection-end-line="689" selection-end-column="19" />
+          <caret line="690" column="19" lean-forward="false" selection-start-line="690" selection-start-column="19" selection-end-line="690" selection-end-column="19" />
+          <caret line="701" column="31" lean-forward="false" selection-start-line="701" selection-start-column="31" selection-end-line="701" selection-end-column="31" />
+          <caret line="709" column="31" lean-forward="false" selection-start-line="709" selection-start-column="31" selection-end-line="709" selection-end-column="31" />
+          <caret line="713" column="31" lean-forward="false" selection-start-line="713" selection-start-column="31" selection-end-line="713" selection-end-column="31" />
+          <caret line="718" column="27" lean-forward="false" selection-start-line="718" selection-start-column="27" selection-end-line="718" selection-end-column="27" />
+          <caret line="722" column="27" lean-forward="false" selection-start-line="722" selection-start-column="27" selection-end-line="722" selection-end-column="27" />
+          <caret line="724" column="27" lean-forward="false" selection-start-line="724" selection-start-column="27" selection-end-line="724" selection-end-column="27" />
+          <caret line="725" column="27" lean-forward="false" selection-start-line="725" selection-start-column="27" selection-end-line="725" selection-end-column="27" />
+          <caret line="727" column="27" lean-forward="false" selection-start-line="727" selection-start-column="27" selection-end-line="727" selection-end-column="27" />
+          <caret line="728" column="27" lean-forward="false" selection-start-line="728" selection-start-column="27" selection-end-line="728" selection-end-column="27" />
+          <caret line="735" column="27" lean-forward="false" selection-start-line="735" selection-start-column="27" selection-end-line="735" selection-end-column="27" />
+          <caret line="739" column="31" lean-forward="false" selection-start-line="739" selection-start-column="31" selection-end-line="739" selection-end-column="31" />
+          <caret line="743" column="31" lean-forward="false" selection-start-line="743" selection-start-column="31" selection-end-line="743" selection-end-column="31" />
+          <caret line="747" column="31" lean-forward="false" selection-start-line="747" selection-start-column="31" selection-end-line="747" selection-end-column="31" />
+          <caret line="754" column="28" lean-forward="false" selection-start-line="754" selection-start-column="28" selection-end-line="754" selection-end-column="28" />
+          <caret line="759" column="27" lean-forward="false" selection-start-line="759" selection-start-column="27" selection-end-line="759" selection-end-column="27" />
+          <caret line="763" column="27" lean-forward="false" selection-start-line="763" selection-start-column="27" selection-end-line="763" selection-end-column="27" />
+          <caret line="766" column="23" lean-forward="false" selection-start-line="766" selection-start-column="23" selection-end-line="766" selection-end-column="23" />
+          <caret line="768" column="23" lean-forward="false" selection-start-line="768" selection-start-column="23" selection-end-line="768" selection-end-column="23" />
+          <caret line="769" column="23" lean-forward="false" selection-start-line="769" selection-start-column="23" selection-end-line="769" selection-end-column="23" />
+          <caret line="771" column="23" lean-forward="false" selection-start-line="771" selection-start-column="23" selection-end-line="771" selection-end-column="23" />
+          <caret line="772" column="23" lean-forward="false" selection-start-line="772" selection-start-column="23" selection-end-line="772" selection-end-column="23" />
+          <caret line="782" column="19" lean-forward="false" selection-start-line="782" selection-start-column="19" selection-end-line="782" selection-end-column="19" />
           <folding />
         </state>
       </provider>
