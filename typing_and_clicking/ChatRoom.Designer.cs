@@ -44,6 +44,7 @@ namespace typing_and_clicking
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.changeSound = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personStand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -188,12 +189,18 @@ namespace typing_and_clicking
             // 
             this.pictureBox11.ErrorImage = global::typing_and_clicking.Properties.Resources.stand;
             this.pictureBox11.Image = global::typing_and_clicking.Properties.Resources.stand1;
-            this.pictureBox11.Location = new System.Drawing.Point(269, 333);
+            this.pictureBox11.Location = new System.Drawing.Point(296, 302);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(54, 90);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 13;
             this.pictureBox11.TabStop = false;
+            // 
+            // changeSound
+            // 
+            this.changeSound.Enabled = true;
+            this.changeSound.Interval = 600000;
+            this.changeSound.Tick += new System.EventHandler(this.changeSoundsEvent);
             // 
             // ChatRoom
             // 
@@ -250,5 +257,6 @@ namespace typing_and_clicking
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Timer changeSound;
     }
 }

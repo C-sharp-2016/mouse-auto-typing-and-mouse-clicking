@@ -44,7 +44,7 @@ namespace typing_and_clicking
             Console.WriteLine("Program is initiated.."); 
             Console.WriteLine(" Auth Token: " + Auth.getLoggedin());
 
-            /*
+         
             if (Auth.getLoggedin() != string.Empty)
             {
                 UserID = "loggedin";
@@ -58,9 +58,9 @@ namespace typing_and_clicking
             {
                 Application.Run(new Login());
             }  
-            */
+            
 
-            Application.Run(new ChatRoom());
+            // Application.Run(new ChatRoom());
 
         }
 

@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.Threading;
 
+
+// https://learn.microsoft.com/en-us/dotnet/api/system.media.soundplayer?view=dotnet-plat-ext-7.0
 namespace typing_and_clicking
 {
     public partial class ChatRoom : Form
@@ -16,13 +20,59 @@ namespace typing_and_clicking
         int gravity = 1;
         int speed = 20;
         string direction = "";
+        string sounds_src = ""; 
 
         public ChatRoom()
         {
             InitializeComponent();
+
+            // sounds_src = "sound/Mouse_click.wav";
+             
+            backgroundMusicRandom(); 
         }
-         
-        private void walk()
+
+
+        /*
+        public static async Task SetInterval(Action action, TimeSpan timeout)
+        {
+            await Task.Delay(timeout).ConfigureAwait(false);
+
+            action();
+
+            SetInterval(action, timeout);
+        }
+
+
+
+
+        private void backgroundMusicRandom()
+        { 
+            SetInterval(() => {
+                Console.WriteLine("Change Sounds"); 
+                  startPlaying(); 
+            }, TimeSpan.FromSeconds(20)); 
+        }
+        */
+        private void backgroundMusicRandom()
+        {
+            playMusic();  
+        }
+        private void playMusic()
+        { 
+            Random rand = new Random(); 
+             
+            sounds_src = "music/"+ rand.Next(8)+ ".wav";
+            Thread th = new Thread(playSoundsDynamic);
+            th.Start();
+        }
+
+        private void playSoundsDynamic()
+        {
+            SoundPlayer sound = new SoundPlayer(@"" + sounds_src + "");
+            sound.PlayLooping();  
+        }
+   
+    private void walk()
         {
             if (direction == "top")
             {
@@ -114,6 +164,12 @@ namespace typing_and_clicking
         private void personStand_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void changeSoundsEvent(object sender, EventArgs e)
+        {
+            Console.WriteLine("change sounds event"); 
+           backgroundMusicRandom();
         }
     }
 }

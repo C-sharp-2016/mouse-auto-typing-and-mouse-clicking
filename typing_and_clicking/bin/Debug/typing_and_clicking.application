@@ -6,7 +6,7 @@
     <deploymentProvider codebase="https://easimpt.com/apps/app-z/typing_and_clicking.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="typing_and_clicking.exe.manifest" size="9811">
@@ -16,7 +16,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FlRt6HZv63CiUGgmlbqPk1dQVk4XhkV2/9Q2UgQV85w=</dsig:DigestValue>
+        <dsig:DigestValue>maMQMbelep65cOwVlCEwZ4nFL4sKFzUnYa8gYkgMaxc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
